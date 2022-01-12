@@ -1,5 +1,5 @@
 .Mainscreen{
-    width: 100%;  
+    min-width: 100%;  
     min-height: 100vh; 
     background:url('../../static/mobBG2.svg');
     background-position:initial;
