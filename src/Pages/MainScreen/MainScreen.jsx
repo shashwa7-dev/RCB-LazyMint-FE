@@ -1,7 +1,5 @@
 import './MainScreen.css'
-import logo from '../../static/logo.svg'
 import rcb_logo from '../../static/rcb_logo.svg'
-import data from '../../data/rcb_players.json'
 import { Navbar } from '../../Components/Navbar/Navbar'
 import {useState} from 'react'
 
@@ -26,7 +24,7 @@ const OtpBlocks = () =>{
         </div>
     )
 }
-export const MainScreen = () => {
+export const MainScreen = ({plyr}) => {
     const [showOtpField, setShowOtpField] = useState(false)
 
     return (
@@ -34,7 +32,7 @@ export const MainScreen = () => {
                 <Navbar />
                 <div className='content_container'>
                     <div className='main_nft_display'>
-                        <video src={data[0].vid_url} autoPlay loop muted playsInline></video>
+                        <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
                     </div>
 
                     <div className='main_content'>

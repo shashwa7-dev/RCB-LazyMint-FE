@@ -14,9 +14,9 @@ const UsernameInputFld = ({text}) =>{
     )
 }
 
-const handleTask= (setProp,task) => {
+const handleTask= (setProp,task_id) => {
     window.event.preventDefault()
-    setProp(!task)
+    setProp(!task_id)
 }
 export const TaskScreen = () => {
     const [taskCompleteA, setTaskCompleteA] = useState(false)
@@ -43,7 +43,7 @@ export const TaskScreen = () => {
                             <i class="fas fa-envelope-open-text"></i>
                             Subscribe to RCB’s Newsletter
                         </a>
-                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteA,taskCompleteA)}>
+                        <a href="" target='_blank' className="submit_task" onClick={()=> handleTask(setTaskCompleteA,taskCompleteA)}>
                             {taskCompleteA ? <i class="fas fa-check"></i> : <span className='task_text one'>Subscribe</span>}
                         </a>
                     </div>
@@ -55,7 +55,7 @@ export const TaskScreen = () => {
                             <i class="fas fa-globe-asia"></i>
                             Checkout RCB’s Website
                         </a>
-                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteB,taskCompleteB)}>
+                        <a href="https://www.royalchallengers.com/" target='_blank' className="submit_task task_b" onClick={()=> handleTask(setTaskCompleteB,taskCompleteB)}>
                                 {taskCompleteB ? <i class="fas fa-check"></i> : <span className='task_text two'>Website</span>}
                         </a>
                     </div>
@@ -99,7 +99,9 @@ export const TaskScreen = () => {
                     {taskCompleteE ? <UsernameInputFld text={'twitter'}/> : ''}
                 </div>
 
-                <a href="" className=" final_submit">Continue</a>
+                {(taskCompleteA && taskCompleteB && taskCompleteC && taskCompleteD && taskCompleteE) 
+                ? <button href="" className="final_submit">Continue</button> :
+                  <button href="" className="disabled">Continue</button>}
             </div>
         </div>
     )
