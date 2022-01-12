@@ -13,6 +13,11 @@ const UsernameInputFld = ({text}) =>{
         </div>
     )
 }
+
+const handleTask= (setProp,task) => {
+    window.event.preventDefault()
+    setProp(!task)
+}
 export const TaskScreen = () => {
     const [taskCompleteA, setTaskCompleteA] = useState(false)
     const [taskCompleteB, setTaskCompleteB] = useState(false)
@@ -38,8 +43,7 @@ export const TaskScreen = () => {
                             <i class="fas fa-envelope-open-text"></i>
                             Subscribe to RCB’s Newsletter
                         </a>
-                        <a href="" className="submit_task" onClick={e => {e.preventDefault() 
-                            setTaskCompleteA(true)}}>
+                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteA,taskCompleteA)}>
                             {taskCompleteA ? <i class="fas fa-check"></i> : <span className='task_text one'>Subscribe</span>}
                         </a>
                     </div>
@@ -51,8 +55,7 @@ export const TaskScreen = () => {
                             <i class="fas fa-globe-asia"></i>
                             Checkout RCB’s Website
                         </a>
-                        <a href="" className="submit_task" onClick={e => {e.preventDefault() 
-                            setTaskCompleteB(true)}}>
+                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteB,taskCompleteB)}>
                                 {taskCompleteB ? <i class="fas fa-check"></i> : <span className='task_text two'>Website</span>}
                         </a>
                     </div>
@@ -63,8 +66,7 @@ export const TaskScreen = () => {
                         <a href="https://www.instagram.com/royalchallengersbangalore/" target='_blank' className="task_name">
                             <i class="fab fa-instagram"></i>
                             Follow RCB on Instagram</a>
-                        <a href="" className="submit_task" onClick={e => {e.preventDefault() 
-                            setTaskCompleteC(true)}}>
+                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteC,taskCompleteC)}>
                                 {taskCompleteC ? <i class="fas fa-chevron-down"></i> : <span className='task_text three'>Follow</span>}
                         </a>
                     </div>
@@ -77,8 +79,7 @@ export const TaskScreen = () => {
                             <i class="fab fa-twitter"></i>
                             Follow @RCBTweets on Twitter
                         </a>
-                        <a href="" className="submit_task" onClick={e => {e.preventDefault() 
-                            setTaskCompleteD(true)}}>
+                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteD,taskCompleteD)}>
                                 {taskCompleteD ? <i class="fas fa-chevron-down"></i> : <span className='task_text four'>Follow</span>}
                         </a>
                     </div>
@@ -91,8 +92,7 @@ export const TaskScreen = () => {
                             <i class="fas fa-retweet"></i>
                             Retweet @RCBTweets on Twitter
                         </a>
-                        <a href="" className="submit_task" onClick={e => {e.preventDefault() 
-                            setTaskCompleteE(true)}}>
+                        <a href="" className="submit_task" onClick={()=> handleTask(setTaskCompleteE,taskCompleteE)}>
                                 {taskCompleteE ? <i class="fas fa-chevron-down"></i> : <span className='task_text five'>Retweet</span>}
                             </a>
                     </div>
