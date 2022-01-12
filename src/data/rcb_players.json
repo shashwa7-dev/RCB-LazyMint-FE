@@ -1,0 +1,135 @@
+[
+    {
+        "plyr_id":1,
+        "plyr_name_id": "ab-de-villiers",
+        "player_name":"AB De Villiers",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606767d68eb942184a5b2fb4_De Villiers (1)-transcode.mp4"
+    },
+    {
+        "plyr_id":2,
+        "plyr_name_id": "adam-zampa",
+        "player_name":"Adam Zampa",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/6067632da5b7d7757e2495d3_Zampa-transcode.mp4"
+    },
+    {
+        "plyr_id":3,
+        "plyr_name_id": "dan-christian",
+        "player_name":"Dan Christian",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f80be284ba8315a3d6a_DC-transcode.mp4"
+    },
+    {
+        "plyr_id":4,
+        "plyr_name_id": "daniel-sams",
+        "player_name":"Daniel Sams",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606762f75b2621cbf37d75c5_Sams-transcode.mp4"
+    },
+    {
+        "plyr_id":5,
+        "plyr_name_id": "devdutt-padikkal",
+        "player_name":"Devdutt Padikkal",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606761350d23c308c7d4073b_Devdutt-transcode.mp4"
+    },
+    {
+        "plyr_id":6,
+        "plyr_name_id": "finn-allen",
+        "player_name":"Finn Allen",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676220348c1c60ff31a296_Finn-transcode.mp4"
+    },
+    {
+        "plyr_id":7,
+        "plyr_name_id": "glenn-maxwell",
+        "player_name":"Glenn Maxwell",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f2da5b7d7db8e24875e_Maxwell-transcode.mp4"
+    },
+    {
+        "plyr_id":8,
+        "plyr_name_id": "harshal-patel",
+        "player_name":"Harshal Patel",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606762b8d33c842a34ffa6dd_Patel-transcode.mp4"
+    },
+    {
+        "plyr_id":9,
+        "plyr_name_id": "kane-richardson",
+        "player_name":"Kane Richardson",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675fb953085ce584b25a3f_Richardson-transcode.mp4"
+    },
+    {
+        "plyr_id":10,
+        "plyr_name_id": "kona-srikar-bharat",
+        "player_name":"Kona Srikar Bharat",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765b09ac636a77c18142f_Bharat-transcode.mp4"
+    },
+    {
+        "plyr_id":11,
+        "plyr_name_id": "kyle-jamieson",
+        "player_name":"Kyle Jamieson",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676285007a3813594aa945_Jamieson-transcode.mp4"
+    },
+    {
+        "plyr_id":12,
+        "plyr_name_id": "mohammed-azharuddeen",
+        "player_name":"Mohammed Azharuddeen",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765155b2621405e7d7b0a_Azhruddeen-transcode.mp4"
+    },
+    {
+        "plyr_id":13,
+        "plyr_name_id": "mohammed-siraj",
+        "player_name":"Mohammed Siraj",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/6067606ea289c1fdf66be70d_Siraj-transcode.mp4"
+    },
+    {
+        "plyr_id":14,
+        "plyr_name_id": "navdeep-saini",
+        "player_name":"Navdeep Saini",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676031440b564b446bed9f_Saini-transcode.mp4"
+    },
+    {
+        "plyr_id":15,
+        "plyr_name_id": "pavan-deshpande",
+        "player_name":"Pavan Deshpande",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765ed16f374673803eb0b_Pavan-transcode.mp4"
+    },
+    {
+        "plyr_id":16,
+        "plyr_name_id": "rajat-patidar",
+        "player_name":"Rajat Patidar",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676404856a6730398ff926_Patidar-transcode.mp4"
+    },
+    {
+        "plyr_id":17,
+        "plyr_name_id": "sachin-baby",
+        "player_name":"Sachin Baby",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606736dc65d1ec11c2e6673c_Sachin Baby Spin-transcode.mp4"
+    },
+    {
+        "plyr_id":18,
+        "plyr_name_id": "shahbaz-ahmed",
+        "player_name":"Shahbaz Ahmed",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676490be6050b5f5c2d6e7_Ahmed-transcode.mp4"
+    },
+    {
+        "plyr_id":19,
+        "plyr_name_id": "suyash-prabhudessai",
+        "player_name":"Suyash Prabhudessai",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606766291e21c720fbe4435d_Prabhudessai-transcode.mp4"
+    },
+    {
+        "plyr_id":20,
+        "plyr_name_id": "virat-kohli",
+        "player_name":"Virat Kohli",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676aadf995715d970a98d2_Virat-transcode.mp4"
+    },
+    {
+        "plyr_id":21,
+        "plyr_name_id": "washington-sundar",
+        "player_name":"Washington Sundar",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606760b13c67a257da1314ac_Sundar-transcode.mp4"
+    },
+    {
+        "plyr_id":22,
+        "plyr_name_id": "yuzvendra-chahal",
+        "player_name":"Yuzvendra Chahal",
+        "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f1cd40d9eb39ebb1bad_chahal-transcode.mp4"
+    }
+    
+]
