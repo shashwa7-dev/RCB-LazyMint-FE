@@ -33,16 +33,18 @@
 }
 .task_container{
     width: 100%;
-    border:1px solid var(--color-secondary);
+    border:2px solid var(--color-secondary);
     border-radius:.5rem;
     margin:1rem auto;
     padding:.5rem;
 }
 .task{
     width:100%;
+    font-size: .85rem;
     display: flex;
     cursor: pointer;
     align-items: center;
+    font-weight: 500
 }
 i{
     font-size:1rem;
@@ -50,7 +52,7 @@ i{
     color:var(--color-secondary)
 }
 .submit_task{
-    border:1px solid var(--color-secondary);
+    border:2px solid var(--color-secondary);
     padding:.25rem;
     border-radius: .25rem;
     text-align: center;
@@ -139,9 +141,6 @@ i{
     }
     .tasks_container{
         max-width: 35rem;
-    }
-    .task_container{
-        border-width: 2px;
     }
     .dehidden_logo{
         position: absolute;
