@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding:.5rem;
     position: relative;
 }
@@ -85,7 +85,7 @@ i{
 /* Dropdown Content (Hidden by Default) */
 .dropdownContainer{
  width:100%;
- margin:.5rem 0;   
+ margin-top:.25rem;
  background-color: rgba(0, 0, 0, 0);
  display: inline-flex;
  align-items: center;
@@ -98,7 +98,7 @@ i{
     border:1px solid white;
 }
 .username_input{
-    margin-left:.5rem;
+    margin-left:.25rem;
     background-color: rgba(0, 0, 0, 0.534);
     border:2px solid white;
     border-radius: .5rem;
@@ -138,9 +138,20 @@ i{
         background: url('../../static/BG1.png');
     }
     .tasks_container{
-        max-width: 47rem;
+        max-width: 35rem;
     }
-
+    .task_container{
+        border-width: 2px;
+    }
+    .dehidden_logo{
+        position: absolute;
+        top:0;
+        left:0;
+        margin:1rem;
+    }
+    .task{   
+        padding:.5 rem;
+    }
     i{
         font-size:1.25rem;
         margin-right:.5rem;

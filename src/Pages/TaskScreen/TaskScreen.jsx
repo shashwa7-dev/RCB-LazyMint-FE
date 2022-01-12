@@ -6,8 +6,7 @@ import {useState} from 'react'
 const UsernameInputFld = ({text}) =>{
     return(
         <div className='dropdownContainer'>
-            <label className='username_lbl' htmlFor="username_input">{text}</label>
-            <input className='username_input' name='username_input' type='text' placeholder='@username' required/>
+            <input className='username_input' name='username_input' type='text' placeholder={`you @${text}`} required/>
             <button type='submit' href="" className="submit_task sub_task" >
             <span className='task_text one'>Follow</span>
             </button>
@@ -69,7 +68,7 @@ export const TaskScreen = () => {
                                 {taskCompleteC ? <i class="fas fa-chevron-down"></i> : <span className='task_text three'>Follow</span>}
                         </a>
                     </div>
-                    {taskCompleteC ? <UsernameInputFld text={'Instagram Username:'}/> : ''}
+                    {taskCompleteC ? <UsernameInputFld text={'insta'}/> : ''}
                 </div>
 
                 <div className="task_container">
@@ -83,7 +82,7 @@ export const TaskScreen = () => {
                                 {taskCompleteD ? <i class="fas fa-chevron-down"></i> : <span className='task_text four'>Follow</span>}
                         </a>
                     </div>
-                    {taskCompleteD ? <UsernameInputFld text={'Twitter Username:'}/> : ''}
+                    {taskCompleteD ? <UsernameInputFld text={'twitter'}/> : ''}
                 </div>
                 
                 <div className="task_container">
@@ -97,7 +96,7 @@ export const TaskScreen = () => {
                                 {taskCompleteE ? <i class="fas fa-chevron-down"></i> : <span className='task_text five'>Retweet</span>}
                             </a>
                     </div>
-                    {taskCompleteE ? <UsernameInputFld text={'Twitter Username:'}/> : ''}
+                    {taskCompleteE ? <UsernameInputFld text={'twitter'}/> : ''}
                 </div>
 
                 <a href="" className=" final_submit">Continue</a>
