@@ -139,7 +139,7 @@ z-index: 10;
 @media (min-width:60em) {
     
      .Mainscreen{
-       background: url('../../static/BG1.png');
+       background: url('../../static/Main-Screen-FreemintBG.svg');
        height: 100vh;
     }
     .Mainscreen .main_content h1{
