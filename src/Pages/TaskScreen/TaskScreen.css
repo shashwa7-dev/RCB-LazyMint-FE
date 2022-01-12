@@ -1,6 +1,6 @@
 .task_screen{
-    width:100vw; 
-    height:100vh;
+    width:100%; 
+    min-height:100vh;
     background:url('../../static/mobBG2.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding:.5rem;
     position: relative;
 }
@@ -22,12 +22,12 @@
 .rcb_logo{
     width:10rem;
 }
-.dehidden_logo{
+/* .dehidden_logo{
     place-self:top;
     position: absolute;
     top:0;
     margin-top:1rem;
-}
+} */
 .tasks_container{
     width: 100%;
 }
@@ -43,7 +43,6 @@
     display: flex;
     cursor: pointer;
     align-items: center;
-    flex-wrap: wrap;
 }
 i{
     font-size:1rem;
@@ -140,11 +139,6 @@ i{
     }
     .tasks_container{
         max-width: 47rem;
-    }
-    .dehidden_logo{
-        top:0;
-        margin:2rem;
-        left:0;
     }
 
     i{
