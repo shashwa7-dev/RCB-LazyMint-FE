@@ -137,7 +137,8 @@ i{
 }
 @media (min-width:50em) {
     .task_screen{
-        background: url('../../static/TasksBG.svg');
+        background: url('../../static/TasksBG.svg')center center repeat;
+        background-size: cover;
     }
     .tasks_container{
         max-width: 35rem;

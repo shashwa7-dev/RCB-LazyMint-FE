@@ -1,9 +1,7 @@
 .Mainscreen{
     min-width: 100%;  
     min-height: 100vh; 
-    background:url('../../static/mobBG2.svg');
-    background-position:initial;
-    background-repeat: no-repeat;
+    background:url('../../static/mobBG2.svg') center center repeat;
     background-size: cover;
     color:var(--color-primary);
     display: flex;
@@ -139,7 +137,8 @@ z-index: 10;
 @media (min-width:60em) {
     
      .Mainscreen{
-       background: url('../../static/Main-Screen-FreemintBG.svg');
+       background: url('../../static/Main-Screen-FreemintBG.svg')center center repeat;
+       background-size: cover;
        height: 100vh;
     }
     .Mainscreen .main_content h1{
