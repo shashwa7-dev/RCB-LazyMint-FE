@@ -1,5 +1,22 @@
 import './PreviewNFT.css'
+import { useMoralis } from 'react-moralis'
+
 export const PreviewNFT = ({plyr}) => {
+    
+    const { account, web3, isWeb3Enabled, enableWeb3, Moralis } = useMoralis()
+    
+    const claimNft = async () => {
+        console.log(account)
+        /*
+            const res = await Moralis.Plugins.rarible.lazyMint({
+                chain: 'eth',
+                userAddress: account,
+                tokenType: 'ERC721',
+                tokenUri: 'ipfs://'
+            })
+         */
+    }
+
     return (
         <div className='preview_nft_container'>
             <div className="task_complete_popup">
@@ -11,7 +28,7 @@ export const PreviewNFT = ({plyr}) => {
                 <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
             </div>
             <div className="claim_nft_btn_container">
-                <button className="claim_nft_btn">Connect & Claim NFT</button>
+                <button className="claim_nft_btn" onClick={claimNft}>Connect & Claim NFT</button>
                 <p className='footer_note'>*Please connect your wallet to get the NFT</p>
             </div>
         </div>

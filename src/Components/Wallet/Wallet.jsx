@@ -6,8 +6,18 @@ import portis from '../../static/potris.svg'
 import wallet_connect from '../../static/wallet_connect.svg'
 import Torus from '../../static/Torus.svg'
 
+import { useMoralis } from 'react-moralis'
 
 export const Wallet = () => {
+
+    const { isAuthenticated, account, authenticate} = useMoralis()
+    
+    const connect = async () => {
+        await authenticate({
+            provider: 'walletconnect',
+            signingMessage: 'Connect your wallet & Claim you NFT !!',
+        })
+    }
 
     return (
         <div className='wallet_component'>
@@ -39,12 +49,12 @@ export const Wallet = () => {
                    <p className="walletName">Bitski</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
-               <div className="wallet torus">
-               <img src={wallet_connect}className="walletImg" />
+               <div className="wallet torus" onClick={connect}>
+               <img src={wallet_connect} className="walletImg" />
                    <p className="walletName">Wallet Connect</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
-               <div className="wallet wallet_connect">
+               <div className="wallet wallet_connect" >
                <img src={Torus}className="walletImg" />
                    <p className="walletName">Torus</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
