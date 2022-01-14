@@ -21,14 +21,14 @@ export const MainScreen = () => {
  const {setA,setSetA} = useModalStore()
 
   const SendOTP = () => {
-    setShowOtpField(true);
+    
     axios
       .post("https://rcb-be.herokuapp.com/rcb/enter", {
         email: email,
       })
       .then((res) => {
         if(res?.status === 200) {
-        
+          setShowOtpField(true);
           setErrors(false)
         }
         res?.status === 400 && setErrors("Invalid Email")
