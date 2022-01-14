@@ -2,11 +2,10 @@ import './Wallet.css'
 import metamask from '../../static/metamask.svg'
 import wallet_connect from '../../static/wallet_connect.svg'
 
-
 import { useMoralis } from 'react-moralis'
 
 export const Wallet = ({closeWallet}) => {
-
+       
     const { isAuthenticated, account, authenticate} = useMoralis()
     
     const connect = async () => {
@@ -16,7 +15,7 @@ export const Wallet = ({closeWallet}) => {
         })
     }
 
-    return (
+       return(
         <div className='wallet_component'>
         <div className="wallet_container">
            <div className="wallet_head">
@@ -32,7 +31,7 @@ export const Wallet = ({closeWallet}) => {
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
                <div className="wallet wallet_connect" onClick={connect}>
-               <img src={wallet_connect} className="walletImg" />
+               <img src={wallet_connect}className="walletImg" />
                    <p className="walletName">Wallet Connect</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
@@ -46,5 +45,5 @@ export const Wallet = ({closeWallet}) => {
            </div>
            </div>
         </div>
-    )
+       )  
 }

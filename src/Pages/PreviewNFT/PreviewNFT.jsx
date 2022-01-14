@@ -24,12 +24,6 @@ export const PreviewNFT = ({plyr}) => {
             })
          */
     }
-
-
-    useEffect(() => {
-        {/* wallet integration logic goes here  */}
-    },[walletConnected])
-
     return (
         <div className='preview_nft_container'>
             <Navbar />

@@ -23,12 +23,6 @@
     border:2px solid var(--color-secondary);
     border-radius: 1.5rem;
 }
-.shadow {
-    -moz-box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
-    -webkit-box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
-    box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
-  }
-
 .nft_vid_container video{
     border-radius: 1.5rem;
     height: 100%;
@@ -42,6 +36,7 @@
 .claim_nft_btn{
     padding:.5rem;
     width:65%;
+    max-width: 20rem;
     border:0;
     border-radius: 1rem;
     color:white;
@@ -58,12 +53,12 @@
         background: url('../../static/Thank\ you\ and\ Preview\ NFTBG.svg') center center no-repeat;
         background-size: cover;
     }
-    .preview_nft_body{
+    /* .preview_nft_body{
         max-width: 50%;
         align-self: center;
     }
     .nft_vid_container{
         max-width: 20rem;
         height: 25rem;
-    }
+    } */
 }
