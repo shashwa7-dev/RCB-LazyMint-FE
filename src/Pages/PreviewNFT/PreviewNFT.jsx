@@ -5,13 +5,28 @@ import {Timeline} from '../../Components/Timeline/Timeline'
 import { useEffect, useState } from 'react/cjs/react.development'
 import { Wallet } from '../../Components/Wallet/Wallet'
 
+import { useModalStore } from '../../App'
+import { useNavigate } from 'react-router-dom'
+
 export const PreviewNFT = ({plyr}) => {
 
     const [showWallet, setShowWallet] = useState(false)
     const [walletConnected, setWalletConnected] = useState(false)
 
     const { account, web3, isWeb3Enabled, enableWeb3, Moralis } = useMoralis()
+    const {setSetA,setSetB,setC,setSetC} = useModalStore()
+    const navigate = useNavigate()
     
+    useEffect(() => {
+        let verification = localStorage.getItem("taskCompleted");
+        if (verification === "false" || !verification) {
+          navigate("/tasks");
+        } else {
+        setSetA(true)
+        setSetB(true) 
+        }
+    }, [])
+
     const claimNft = async () => {
         setShowWallet(true)
         console.log(account)
@@ -24,12 +39,9 @@ export const PreviewNFT = ({plyr}) => {
             })
          */
     }
-
-
     useEffect(() => {
         {/* wallet integration logic goes here  */}
     },[walletConnected])
-
     return (
         <div className='preview_nft_container'>
             <Navbar />

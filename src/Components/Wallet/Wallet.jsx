@@ -2,21 +2,23 @@ import './Wallet.css'
 import metamask from '../../static/metamask.svg'
 import wallet_connect from '../../static/wallet_connect.svg'
 
-
 import { useMoralis } from 'react-moralis'
+import { useNavigate } from 'react-router-dom'
 
 export const Wallet = ({closeWallet}) => {
-
+       
     const { isAuthenticated, account, authenticate} = useMoralis()
-    
+    const navigate  = useNavigate()
+
     const connect = async () => {
         await authenticate({
             provider: 'walletconnect',
             signingMessage: 'Connect your wallet & Claim you NFT !!',
         })
+        await navigate("/share_nft")
     }
 
-    return (
+       return(
         <div className='wallet_component'>
         <div className="wallet_container">
            <div className="wallet_head">
@@ -32,7 +34,7 @@ export const Wallet = ({closeWallet}) => {
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
                <div className="wallet wallet_connect" onClick={connect}>
-               <img src={wallet_connect} className="walletImg" />
+               <img src={wallet_connect}className="walletImg" />
                    <p className="walletName">Wallet Connect</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
@@ -42,9 +44,9 @@ export const Wallet = ({closeWallet}) => {
            </div>
            <div className="wallet_footer">
                <p className="wallet_footer_note">Haven’t got a crypto wallet yet?</p>
-               <button className="how2connect_btn">Learn How to Connect</button>
+               <button onClick={() => navigate("/tutorial")} className="how2connect_btn">Learn How to Connect</button>
            </div>
            </div>
         </div>
-    )
+       )  
 }
