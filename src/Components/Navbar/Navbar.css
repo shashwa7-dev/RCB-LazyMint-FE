@@ -1,5 +1,32 @@
 .navbar{
     width:100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0.5rem;
+    margin-top:.5rem;
+    height: 5rem; 
 }
 
+.logo:nth-child(2){
+    width:4rem;
+    margin-top:.5rem;
+}
+
+.logo{
+    max-width:8rem;
+}
+
+@media (min-width:60em){
+    .navbar{
+        justify-content: start;
+        padding:2rem;
+     }
+     .logo{
+        max-width:10rem;
+    }
+    
+     .logo:nth-child(2){
+         display: none;
+     }
+}

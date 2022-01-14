@@ -1,11 +1,19 @@
 import './PreviewNFT.css'
 import { useMoralis } from 'react-moralis'
+import { Navbar } from '../../Components/Navbar/Navbar'
+import {Timeline} from '../../Components/Timeline/Timeline'
+import { useEffect, useState } from 'react/cjs/react.development'
+import { Wallet } from '../../Components/Wallet/Wallet'
 
 export const PreviewNFT = ({plyr}) => {
-    
+
+    const [showWallet, setShowWallet] = useState(false)
+    const [walletConnected, setWalletConnected] = useState(false)
+
     const { account, web3, isWeb3Enabled, enableWeb3, Moralis } = useMoralis()
     
     const claimNft = async () => {
+        setShowWallet(true)
         console.log(account)
         /*
             const res = await Moralis.Plugins.rarible.lazyMint({
@@ -17,20 +25,29 @@ export const PreviewNFT = ({plyr}) => {
          */
     }
 
+
+    useEffect(() => {
+        {/* wallet integration logic goes here  */}
+    },[walletConnected])
+
     return (
         <div className='preview_nft_container'>
-            <div className="task_complete_popup">
-                <p className="popup_content">Thanks for completing the task link your wallet and claim your NFT</p>
-                <button className="close_popup">x</button>
+            <Navbar />
+            <Timeline stage_id={3} stage_complete_status={true}/>    
+            <div className="preview_nft_body">
+                <div className="container_heading">Here’s your NFT</div>
+                <div className="nft_vid_container">
+                    <video src={plyr.vid_url} autoPlay loop muted playsInline className='shadow'></video>
+                </div>
+                <div className="claim_nft_btn_container">
+                    <button className="claim_nft_btn" onClick={claimNft}>Connect & Claim NFT</button>
+                    <p className='footer_note'>*Please connect your wallet to get the NFT</p>
+                </div>
             </div>
-            <div className="container_heading">Here’s your NFT</div>
-            <div className="nft_vid_container">
-                <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
-            </div>
-            <div className="claim_nft_btn_container">
-                <button className="claim_nft_btn" onClick={claimNft}>Connect & Claim NFT</button>
-                <p className='footer_note'>*Please connect your wallet to get the NFT</p>
-            </div>
+
+            {/* close wallet logic */}
+            {showWallet ? <Wallet closeWallet={() => setShowWallet(false)}/>:''}
+
         </div>
     )
 }

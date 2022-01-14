@@ -40,23 +40,27 @@
 }
 .task{
     width:100%;
-    font-size: .85rem;
+    font-size: 1rem;
+    padding:.5rem;
     display: flex;
     cursor: pointer;
     align-items: center;
     font-weight: 500
 }
-i{
-    font-size:1rem;
-    margin-right:.25rem;
-    color:var(--color-secondary)
+.chevron_img{
+    font-size: 1rem;
+}
+.social_img i{
+    font-size:1.5rem;
+    margin-right:.5rem;
+    color:var(--color-primary)
 }
 .submit_task{
     border:2px solid var(--color-secondary);
     padding:.25rem;
     border-radius: .25rem;
     text-align: center;
-    width:7rem;
+    width:6rem;
     color:var(--color-primary);
     font-weight: var(--font-regular);
     background: var(--color-black);
@@ -80,14 +84,14 @@ i{
     border-radius: .5rem;
     text-align: center;
     font-weight: var(--font-bold);
-    border:2px solid white;
+    border:0;
     font-size:1.2rem;
     color:white;
     cursor: pointer;
 }
 .disabled{
     display: block;
-    background: rgba(240, 240, 240, 0.527);
+    background: var(--color-gradient);
     padding:.5rem;
     width:50%;
     margin:1rem auto;
@@ -95,6 +99,7 @@ i{
     text-align: center;
     font-weight: var(--font-bold);
     border:2px solid white;
+    color: gray;
     font-size:1.2rem;
     background-repeat:no-repeat;
     border: none; 
@@ -103,7 +108,8 @@ i{
 /* Dropdown Content (Hidden by Default) */
 .dropdownContainer{
  width:100%;
- margin-top:.25rem;
+ padding: .5rem;
+ margin-bottom: .25rem;
  background-color: rgba(0, 0, 0, 0);
  display: inline-flex;
  align-items: center;
@@ -114,10 +120,9 @@ i{
     margin-left:auto;
     padding:.25rem;
     justify-content: center;
-    border:1px solid white;
+    border:1px solid rgb(255, 255, 255);
 }
 .username_input{
-    margin-left:.25rem;
     background-color: rgba(0, 0, 0, 0.534);
     border:2px solid white;
     border-radius: .5rem;

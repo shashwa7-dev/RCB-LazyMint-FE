@@ -1,0 +1,23 @@
+.timeline_container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:.25rem;
+    margin:1.8rem 0;
+}
+
+.block{
+    border:1px solid red;
+    color:var(--color-primary);
+    font-weight: var(--font-bold);
+    width:2.5rem;
+    height: 2.5rem;
+    padding:.5rem 0;
+    text-align: center;
+    border-radius: 50%;
+}
+.block i{
+    /*centering the check icon*/
+    margin:.25rem auto;
+}

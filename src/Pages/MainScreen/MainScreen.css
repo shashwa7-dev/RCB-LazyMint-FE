@@ -8,29 +8,15 @@
     flex-direction: column;
     align-items: center;
 }
-.navbar{
-    justify-content: space-around;
-    align-items: center;
-    padding:0.5rem;
-    margin-top:0.5rem;
-    height: 5rem; 
-}
 
 .logo_content{
     display: none;
 }
-.logo:nth-child(2){
-    width:5rem;
-    margin-top:.5rem;
-}
 
-.logo{
-    max-width:8rem;
-}
 
 .main_nft_display{
     margin:1rem auto;
-    width: 85%;
+    width: 95%;
     padding:1rem;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -46,7 +32,7 @@
 .main_nft_display video{
     height: 100%;
     width: 100%;
-  object-fit:cover
+    object-fit:cover;
 }
 
 .Mainscreen .content_container .main_content{
@@ -77,13 +63,18 @@
 .inputFl_container input{
 padding:1rem;
 outline:none;
+display: block;
 border-radius: .5rem;
 color: var(--color-primary);
 font-weight: var(--font-bold);
-border: 2px solid var(--color-secondary);
+background: var(--color-gradient);
+position: relative;
+border:0;
 background: rgba(255, 255, 255, 0.096);
-z-index: 10;
+border:2px solid var(--color-secondary);
 }
+
+
 .inputFl_container button{
     width:50%;
     margin-top:.5rem;
@@ -137,26 +128,14 @@ z-index: 10;
 @media (min-width:60em) {
     
      .Mainscreen{
-       background: url('../../static/Main-Screen-FreemintBG.svg')center center repeat;
+       background: url('../../static/Main-Screen-FreemintBG.svg')center center no-repeat;
        background-size: cover;
-       height: 100vh;
     }
     .Mainscreen .main_content h1{
         font-size: 3rem;
         line-height: 3rem;
     }
-    .navbar{
-        justify-content: start;
-        padding:2rem;
-        
-     }
-     .logo{
-        max-width:10rem;
-    }
     
-     .logo:nth-child(2){
-         display: none;
-     }
      .logo_content{
          display: block;
      }
@@ -165,6 +144,9 @@ z-index: 10;
      }
      .inputFl_container{
          width:70%
+     }
+     .main_nft_display{
+         width: 85%;
      }
      .content_container{
          display: flex;

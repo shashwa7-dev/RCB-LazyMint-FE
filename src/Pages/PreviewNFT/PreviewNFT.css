@@ -1,0 +1,69 @@
+.preview_nft_container{
+    display: flex;
+    width:100%;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url('../../static/mobBG2.svg') center center no-repeat;
+    background-size: cover;
+}
+.preview_nft_body{
+ width: 100%;
+}
+.container_heading{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: var(--font-bold);
+
+}
+.nft_vid_container{
+    margin:1rem auto;
+    max-width: 17rem;
+    height: 22rem;
+    background-color: rgba(0, 0, 0, 0);
+    border:2px solid var(--color-secondary);
+    border-radius: 1.5rem;
+}
+.shadow {
+    -moz-box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
+    -webkit-box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
+    box-shadow: 0px -5px 20px 5px rgba(255, 0, 0, 0.657);
+  }
+
+.nft_vid_container video{
+    border-radius: 1.5rem;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.claim_nft_btn_container{
+ text-align: center; 
+ margin:1rem 0;
+}
+.claim_nft_btn{
+    padding:.5rem;
+    width:65%;
+    border:0;
+    border-radius: 1rem;
+    color:white;
+    outline:none;
+    background: var(--color-gradient);
+    cursor: pointer;
+}
+.claim_nft_btn_container .footer_note{
+    margin:.25rem;
+}
+
+@media (min-width:40em) {
+    .preview_nft_container{
+        background: url('../../static/Thank\ you\ and\ Preview\ NFTBG.svg') center center no-repeat;
+        background-size: cover;
+    }
+    .preview_nft_body{
+        max-width: 50%;
+        align-self: center;
+    }
+    .nft_vid_container{
+        max-width: 20rem;
+        height: 25rem;
+    }
+}
