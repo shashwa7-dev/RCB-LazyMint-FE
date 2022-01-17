@@ -186,10 +186,12 @@ export const TaskScreen = () => {
               ) : (
                 !dropDown?.setA && (
                   <span
-                    onClick={() =>
+                    onClick={() => {
                       setDropDown({
                         setA: !dropDown.setA,
                       })
+                      window.open("https://www.instagram.com/de.hidden/?hl=en", "_blank");
+                    }
                     }
                   >
                     Follow
@@ -217,7 +219,7 @@ export const TaskScreen = () => {
                 type="submit"
                 className="submit_task sub_task"
               >
-                <span className="task_text one">Follow</span>
+                <span className="task_text one">Submit</span>
               </button>
             </div>
           ) : (
@@ -246,6 +248,7 @@ export const TaskScreen = () => {
                 setDropDown({
                   setB: !dropDown.setB,
                 });
+                 window.open("https://twitter.com/intent/follow?original_referer=http%3A%2F%2F127.0.0.1%3A5500%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Edehidden_&screen_name=dehidden_","_blank");
               }}
             >
               {taskD ? (
@@ -272,15 +275,12 @@ export const TaskScreen = () => {
                 <button type="submit" href="" className="submit_task sub_task">
                   <span
                     onClick={() => {
-                      // window.open(
-                      //   "https://twitter.com/intent/follow?original_referer=http%3A%2F%2F127.0.0.1%3A5500%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5ERCBTweets&screen_name=RCBTweets",
-                      //   "_blank"
-                      // );
+                    
                       TwitterFollow();
                     }}
                     className="task_text one"
                   >
-                    Follow
+                    Submit
                   </span>
                 </button>
               </div>
@@ -311,6 +311,7 @@ export const TaskScreen = () => {
                 setDropDown({
                   setC: !dropDown.setC,
                 });
+                window.open("https://twitter.com/intent/retweet?tweet_id=1476998093639983113&original_referer=http://127.0.0.1:5500/twitter.html","_blank");
               }}
             >
               {taskE ? (
@@ -341,7 +342,7 @@ export const TaskScreen = () => {
                   }}
                   className="task_text one"
                 >
-                  Retweet
+                  Submit
                 </span>
               </button>
             </div>

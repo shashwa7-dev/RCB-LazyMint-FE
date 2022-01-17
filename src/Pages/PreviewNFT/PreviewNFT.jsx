@@ -2,14 +2,14 @@ import './PreviewNFT.css'
 import { useMoralis } from 'react-moralis'
 import { Navbar } from '../../Components/Navbar/Navbar'
 import {Timeline} from '../../Components/Timeline/Timeline'
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef } from 'react'
 import { Wallet } from '../../Components/Wallet/Wallet'
 
 import { useModalStore } from '../../App'
 import { useNavigate } from 'react-router-dom'
 
 export const PreviewNFT = ({plyr}) => {
-
+    let walletRef = useRef(null)
     const [showWallet, setShowWallet] = useState(false)
     const [walletConnected, setWalletConnected] = useState(false)
 
@@ -58,7 +58,7 @@ export const PreviewNFT = ({plyr}) => {
             </div>
 
             {/* close wallet logic */}
-            {showWallet ? <Wallet closeWallet={() => setShowWallet(false)}/>:''}
+            {showWallet ? <Wallet forwardedRef={walletRef} closeWallet={() => setShowWallet(false)}/>:''}
 
         </div>
     )

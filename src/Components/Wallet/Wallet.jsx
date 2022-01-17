@@ -8,8 +8,26 @@ import { useNavigate,useLocation } from 'react-router-dom'
 import { SuccessPopup } from '../SuccessPopUp/SuccessPopup'
 import { useState } from 'react'
 
+import axios from 'axios'
+
 export const Wallet = ({closeWallet}) => {
        
+    const [walletId,setWalletId] = useState(null)
+    const WalletPost = async () => {
+        axios
+          .post("https://rcb-be.herokuapp.com/rcb/wallet", {
+            email: localStorage.getItem("email"),
+            wallet: walletId
+          })
+          .then((res) => {
+            console.log(res);
+            setShowSuccess(true)
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
 
     const { isAuthenticated, account, authenticate} = useMoralis()
     const navigate  = useNavigate()
@@ -21,8 +39,28 @@ export const Wallet = ({closeWallet}) => {
             provider: 'walletconnect',
             signingMessage: 'Connect your wallet & Claim you NFT !!',
         })
-        setShowSuccess(true)
+        console.log(isAuthenticated)
+        if(isAuthenticated) {
+            setWalletId(account.toString())
+            WalletPost()
+           
+        }
+      
+
     }
+
+    const MetaMaskConnect = async() => {await authenticate({
+        provider: 'metamask',
+        signingMessage: 'Connect your wallet & Claim you NFT !!',
+    })
+    console.log(isAuthenticated)
+    console.log(account)
+    if(isAuthenticated) {
+        setWalletId(account)
+        WalletPost()
+    }
+}
+
 
 
     const walletClose = () => {
@@ -44,7 +82,7 @@ export const Wallet = ({closeWallet}) => {
            <div className="wallet_body">
             <p className='wallet_body_note'>*Select your preferable wallet.</p>
             <div className="wallets">
-               <div className="wallet meta_mask">
+               <div className="wallet meta_mask"  onClick={MetaMaskConnect}>
                 <img src={metamask}className="walletImg" />
                    <p className="walletName">Meta Mask</p>
                    <span className="chevron"><i class="fas fa-chevron-right"></i></span>
@@ -56,7 +94,6 @@ export const Wallet = ({closeWallet}) => {
                </div>
            </div>
 
-           <button className="wallet_body_connect_btn">Connect</button>
            </div>
            <div className="wallet_footer">
                <p className="wallet_footer_note">Haven’t got a crypto wallet yet?</p>

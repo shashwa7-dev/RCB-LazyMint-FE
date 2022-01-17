@@ -11,9 +11,9 @@ export const ShareNFT = ({plyr}) => {
     const navigate = useNavigate()
     const {setSetC,setSetA,setSetB} = useModalStore()
     useEffect(() => {
-        let verification = localStorage.getItem("taskCompleted");
+        let verification = localStorage.getItem("claimed_nft");
         if (verification === "false" || !verification) {
-          navigate("/tasks");
+          navigate("/claim_nft");
         } else {
         setSetA(true)
         setSetB(true) 
@@ -30,9 +30,7 @@ export const ShareNFT = ({plyr}) => {
                 <div className="share_nft_vid_container shadow">
                     <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
                 </div>
-                <button onClick={() => 
-                    window.location.href = 'https://verify.dehidden.com/rcb/1'
-                } className="view_nft_btn">View NFT</button>
+                <button className="view_nft_btn">View NFT</button>
             </div>
            
             <div className="share_nft_footer">
