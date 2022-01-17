@@ -1,0 +1,399 @@
+body{
+  background-color: #0d0e1d;
+  overflow: hidden;
+}
+.rcbBody{
+  font-family: "Caustenround", sans-serif;
+  line-height: 1.5;
+  color: #f4f4f4;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../media/rcbBG.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+.rcb_button {
+  border: 0;
+  outline: 0;
+  padding: 12px 40px;
+  border-radius: 41px;
+  margin: 15px auto;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.rcb_primary {
+  background-color: #ff4433e1;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(233,42,48,1) 0%, rgba(235, 31, 31, 0.472) 100%, rgb(255, 58, 104) 100%);
+  box-shadow: 0 0 20px #ff44339a;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  transition: .3s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.rcb_primary:hover{
+  box-shadow: 0 0 20px #ff4433dc;
+}
+
+.rcb_microsite {
+  height: 100%;
+  width: 100%
+}
+.rcb_microsite .rcb_microsite_page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+/* NAV STYLES */
+.rcb_microsite .rcb_microsite_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rcb_microsite .rcb_microsite_nav .rcb_logo {
+  z-index: 5;
+}
+.rcb_microsite .rcb_right_nav {
+  padding: 18px 22px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.rcb_microsite .rcb_linkbar {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 410px;
+  background: rgba(26, 26, 26, .5);
+  background-blend-mode: multiply;
+  border-radius: 60px;
+  position: relative;
+  padding: 12px 16px;
+}
+.rcb_microsite .rcb_linkbar .rcb_linkbar_text {
+  width: 200px;
+  margin-right: 15px;
+  text-overflow: ellipsis;
+  overflow:auto;
+  margin-left: 15px;
+}
+.rcb_microsite .rcb_linkbar .rcb_linkbar_text::-webkit-scrollbar {
+  display: none;
+}
+
+.rcb_microsite .rcb_mobile_copy {
+  z-index: 5;
+  padding: 8px;
+  place-items: center;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 2rem;
+  display: none;
+  color:white;
+  cursor: pointer;
+  font-size:25px;
+  border:2px solid white;
+  box-shadow: 0 0 20px #ff4433dc;;
+}
+.rcb_microsite .rcb_copytext_mobile {
+  display: none;
+}
+.rcb_microsite .rcb_linkbar .rcb_button {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  margin: 0
+}
+.rcb_microsite .rcb_linkbar .rcb_button i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+
+/* MAIN PANEL SYLES */
+/* UTILITY STYLES*/
+.rcb_microsite .rcb_utilities {
+  display: -ms-grid;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;  
+  z-index: 10;
+  background: url('../media/rcb.svg') no-repeat fixed bottom right;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container {
+  width: 80%;
+  margin-top:50px;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .45);
+  padding: 8px;
+  margin: 14px auto;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out, background-color 0.2s ease-in-out;
+  outline: none;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility:hover{
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+  background: rgb(0, 0, 0);
+}
+
+
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_icon {
+  margin-right: 15px;
+  background: rgba(40,40,40,.5);
+  border-radius: 16px;
+  height: 80px;
+  width: 80px;
+  padding: 12px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_icon img {
+  height: 50px;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text {
+  margin: 10px 0;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text .rcb_utility_heading {
+  color:rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 900;
+} 
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text .rcb_utility_subheading {
+  font-size: 20px;
+  font-weight: 700px;
+}
+
+/*NFT DISPLAY PANNEL STYLES*/
+.rcb_microsite_page .rcb_nftdisplay {
+  width: 35%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, rgb(0, 0, 0.500) 0%, rgba(0, 0, 0, 0.600)100%); 
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 1rem 0 rgba(110, 110, 110, 0.400);
+  padding-top: 1rem;
+  border:1px solid rgba(0, 0, 0, 0); /*this necesary! otherwise scroll will break*/
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container {
+  text-align: center;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftdisplay_nft {
+  margin: 20px auto;  
+  height: 450px;
+  width: 380px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftdisplay_nft video {
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_projectname {
+  font-size: 30px;
+  font-weight: 900;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftname {
+  font-weight: 900;
+  font-size: 40px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftnumber {
+  font-weight: 600;
+  font-size: 32px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_aboutbutton a {
+  color: #f4f4f4;
+  font-weight: 600;
+  font-size: 20px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_aboutbutton button {
+  background-color: #ff4433e1;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 20px #ff44339a;
+  transition: .3s ease-in-out;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_aboutbutton button:hover{
+  box-shadow: 0 0 20px #ff4433dc;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_aboutbutton button img {
+  margin-right: 5px;
+  height: 24px;
+}
+
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay:before {
+  inset: 0;
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 15, 15, 0.1);
+  filter: blur(2px);
+  z-index: -1;
+}
+.rcb_microsite .rcb_microsite_page .rcb_mainpanel {
+  flex: 65% 1;
+  height: 100vh;
+}
+
+/* RESPONSIVE STYLES */
+/* MAX WIDTH 991px*/
+@media screen and (max-width:991px) {
+  body{
+    overflow-y: visible;
+    overflow-x:hidden;
+  }
+  .rcbBody{
+    background-image: url('../media/rcbmobBG.svg');
+  }
+  .rcb_microsite .rcb_linkbar {
+  display: none;
+}
+.rcb_microsite .rcb_mobile_copy {
+  display: -ms-grid;
+  display: grid;
+}
+.rcb_microsite .rcb_copytext_mobile {
+  position: fixed;
+  bottom: 40px;
+  background-color: #ff2d62;
+  padding: 8px 15px;
+  border-radius: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+.rcb_microsite .rcb_microsite_page {
+  display: flex;
+  flex-direction: column;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay {
+  height: auto;
+  margin-top:29px;
+  min-width: 100vw;
+  margin: 80px auto;/*
+  padding-top: 20px;
+  padding-bottom: 20px;  */
+  box-shadow: none;
+  background: linear-gradient(170deg, rgba(0, 0, 0, 0.287) 0%, rgba(182, 0, 0, 0)100%); 
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay:before {
+  inset: 0;
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: -1;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container {
+  padding: 0;
+}
+ .rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftdisplay_nft {
+  height: 450px;
+  width: 330px;
+  transform: translateY(20px);
+} 
+.rcb_microsite .rcb_microsite_page .rcb_mainpanel {
+  flex: 100% 1;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.rcb_microsite .rcb_utilities {
+  min-height: auto;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container {
+  width: 80%;
+  margin: 30px auto;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.685);
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #7978789a;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text {
+  margin: 10px 0;
+}
+
+}
+
+/* MAX WIDTH 768*/
+
+@media screen and (max-width:768px) {
+
+  .rcb_microsite .rcb_microsite_page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_projectname {
+  font-size: 28px;
+}
+/* .rcb_microsite .rcb_microsite_page .rcb_nftdisplay {
+  width: 92%;
+  border:1px solid white;
+} */
+
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftname {
+  font-size: 32px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftnumber {
+  font-size: 24px;
+}
+.rcb_microsite .rcb_microsite_page .rcb_nftdisplay .rcb_nftdisplay_container .rcb_nftdisplay_nft {
+  width: 340px;
+  transform: translateY(10px);
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container {
+  width: 95%;}
+
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility {
+  padding: 10px;
+  width: auto;
+  max-width: 92%}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text .rcb_utility_heading {
+  font-size: 22px;
+}
+.rcb_microsite .rcb_utilities .rcb_utilities_container .rcb_utility .rcb_utility_text .rcb_utility_subheading {
+  display: none;
+}
+}
+

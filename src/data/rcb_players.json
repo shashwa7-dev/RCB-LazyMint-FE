@@ -3,132 +3,176 @@
         "plyr_id":1,
         "plyr_name_id": "ab-de-villiers",
         "player_name":"AB De Villiers",
+        "plyr_ipfs_link":"http://ipfs.io/ipfs/QmYqGvoLf7ZvZed4s8VKyQdgVsU2c28ViWmPXMPKgLNM6M",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606767d68eb942184a5b2fb4_De Villiers (1)-transcode.mp4"
     },
     {
         "plyr_id":2,
         "plyr_name_id": "adam-zampa",
         "player_name":"Adam Zampa",
+        "plyr_ipfs_link":"http://ipfs.io/ipfs/Qmcpad75WRmWRqbmEqqYYjBscah6THsJB5TpatZdUrFwXi",
+        "plyr_ar_link":"https://www.instagram.com/ar/4631481893639575/?ch=N2FlNjIyNzJmMjg4NjBjMWJiZGI0ZjA1YWExY2M2NmU%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/6067632da5b7d7757e2495d3_Zampa-transcode.mp4"
     },
     {
         "plyr_id":3,
         "plyr_name_id": "dan-christian",
         "player_name":"Dan Christian",
+        "plyr_ipfs_link":"http://ipfs.io/ipfs/QmRvLN7NS6hvssDdX8NDc8qvBzQCz1LjyTidWguTFjXrg1",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f80be284ba8315a3d6a_DC-transcode.mp4"
     },
     {
         "plyr_id":4,
         "plyr_name_id": "daniel-sams",
         "player_name":"Daniel Sams",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmZrd2aHR3MqjGQsfN56sHasWsrNaUpSJupE8tbFZ8oBeG",
+        "plyr_ar_link":"https://www.instagram.com/ar/1067661860684687/?ch=NzEyNDc0NjA0M2Q1M2ZiODI5ZjJlZGFlMWRiYTAzMDM%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606762f75b2621cbf37d75c5_Sams-transcode.mp4"
     },
     {
         "plyr_id":5,
         "plyr_name_id": "devdutt-padikkal",
         "player_name":"Devdutt Padikkal",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmbZmNQeDhrxFnorZTMMsMizgAj8i2TxgV6oRBiRDiUU2C",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606761350d23c308c7d4073b_Devdutt-transcode.mp4"
     },
     {
         "plyr_id":6,
         "plyr_name_id": "finn-allen",
         "player_name":"Finn Allen",
+        "plyr_ipfs_link":"http://ipfs.io/ipfs/QmZaK6d32k5QjqeCmUUcJwWQByRoF399GFNz2DJGzxq8Ru",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676220348c1c60ff31a296_Finn-transcode.mp4"
     },
     {
         "plyr_id":7,
         "plyr_name_id": "glenn-maxwell",
         "player_name":"Glenn Maxwell",
+        "plyr_ipfs_link":"http://ipfs.io/ipfs/QmVCWw6LDdUVSfBUVf4X7FEyNWQnGYvTmFWxBxToHxQWkp",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f2da5b7d7db8e24875e_Maxwell-transcode.mp4"
     },
     {
         "plyr_id":8,
         "plyr_name_id": "harshal-patel",
         "player_name":"Harshal Patel",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmcaKPDTMTBjNbzgbJh4TvSZEZdrwMkaAAyjMuz7Jirk3Q",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606762b8d33c842a34ffa6dd_Patel-transcode.mp4"
     },
     {
         "plyr_id":9,
         "plyr_name_id": "kane-richardson",
         "player_name":"Kane Richardson",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmTt5ExqFADQh4uiAwbBqDgHvKLi2uztLFzbU5SPfX8nqc",
+        "plyr_ar_link":"https://www.instagram.com/ar/1148303715912115/?ch=NzIxNjNjZmRlNDllMmIxODZlYmJhM2YyNjdiZDZiMWY%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675fb953085ce584b25a3f_Richardson-transcode.mp4"
     },
     {
         "plyr_id":10,
         "plyr_name_id": "kona-srikar-bharat",
         "player_name":"Kona Srikar Bharat",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmfKRveoPYuNs7xS4LfsdWwNHqo1TsnxHAbZHVgLfm7Rv4",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765b09ac636a77c18142f_Bharat-transcode.mp4"
     },
     {
         "plyr_id":11,
         "plyr_name_id": "kyle-jamieson",
         "player_name":"Kyle Jamieson",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmYdG1Q34fCtDRow7JUPgi8ASN3UKdifs6tRtw99ao4roP",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676285007a3813594aa945_Jamieson-transcode.mp4"
     },
     {
         "plyr_id":12,
         "plyr_name_id": "mohammed-azharuddeen",
         "player_name":"Mohammed Azharuddeen",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmYWPvYfuBHfL1AayRRtX3wKP3PhBHcrvgyq4PziDeEwcD",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765155b2621405e7d7b0a_Azhruddeen-transcode.mp4"
     },
     {
         "plyr_id":13,
         "plyr_name_id": "mohammed-siraj",
         "player_name":"Mohammed Siraj",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmbhvgWxZhVn5nEDhUZishG9tTgv6VoJB1m4vkdFjcnC8k",
+        "plyr_ar_link":"https://www.instagram.com/ar/1082850435864182/?ch=NmVjN2MyNzE4MTU3ZTdhN2FmNDE4MWFjNTU4NWVkMDk%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/6067606ea289c1fdf66be70d_Siraj-transcode.mp4"
     },
     {
         "plyr_id":14,
         "plyr_name_id": "navdeep-saini",
         "player_name":"Navdeep Saini",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmdHCf2f9mTRPUpzLPcjuhgJuzVcAaAjm8mmVitSz2pwkL",
+        "plyr_ar_link":"https://www.instagram.com/ar/897022370957235/?ch=M2E1ZGMyZjU4M2VhNTgwMDEwODM3NzVlYTcxYWQ0YTc%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676031440b564b446bed9f_Saini-transcode.mp4"
     },
     {
         "plyr_id":15,
         "plyr_name_id": "pavan-deshpande",
         "player_name":"Pavan Deshpande",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmUpSX2CAMpyw6nrfJwrvT3z64t9xKSqRXsa5rbTs32BrN",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606765ed16f374673803eb0b_Pavan-transcode.mp4"
     },
     {
         "plyr_id":16,
         "plyr_name_id": "rajat-patidar",
         "player_name":"Rajat Patidar",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmZssqjnSZMwHDGa2UCcpwLiY8U8gNjspwz3vkRs479Gud",
+        "plyr_ar_link":"https://www.instagram.com/ar/1099937670768254/?ch=ZjRhNGIwZWFmNGViOGQ5ZjFkNjg3Zjk3MGFjMTc3MWM%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676404856a6730398ff926_Patidar-transcode.mp4"
     },
     {
         "plyr_id":17,
         "plyr_name_id": "sachin-baby",
         "player_name":"Sachin Baby",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmVZ46SPDn1NFi8ctvUSnS97GBV2pe8kVm1W7rhVPDN3No",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606736dc65d1ec11c2e6673c_Sachin Baby Spin-transcode.mp4"
     },
     {
         "plyr_id":18,
         "plyr_name_id": "shahbaz-ahmed",
         "player_name":"Shahbaz Ahmed",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmXUnfhUpKmNvZ3gfJrnbsS89kHyeQDTY5gcgTYsiuMFnp",
+        "plyr_ar_link":"",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676490be6050b5f5c2d6e7_Ahmed-transcode.mp4"
     },
     {
         "plyr_id":19,
         "plyr_name_id": "suyash-prabhudessai",
         "player_name":"Suyash Prabhudessai",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/Qmboen4mHiAtR4f7H18NHKkxZV1ZWhPfRL2vXgGYuD8W4x",
+        "plyr_ar_link":"https://www.instagram.com/ar/449004183623410/?ch=ZWI3N2I5ZmE1OTQ4ZDdkNzEzNDVkZDQ5NGRmODU2YjE%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606766291e21c720fbe4435d_Prabhudessai-transcode.mp4"
     },
     {
         "plyr_id":20,
         "plyr_name_id": "virat-kohli",
         "player_name":"Virat Kohli",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/Qmf9rvvZ5owCYyAZ3W7Vub2oxWcEFiNPGt4K78EABZcmVT",
+        "plyr_ar_link":"https://www.instagram.com/ar/227957519518733/?ch=Nzg2ZjhkYzUyYmYzYzVlZmUzMTRlNmMzOTEwMTZhNmE%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60676aadf995715d970a98d2_Virat-transcode.mp4"
     },
     {
         "plyr_id":21,
         "plyr_name_id": "washington-sundar",
         "player_name":"Washington Sundar",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/Qmdz1C5MZpeYs6j47tTZLRVbvLfUHK7EgWH4E2Mai1hcck",
+        "plyr_ar_link":"https://www.instagram.com/ar/445924567198420/?ch=ZTU1ODJjNTVmNDg0NmJmMTYzMDI5YmRlZTJhYTJiYTU%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/606760b13c67a257da1314ac_Sundar-transcode.mp4"
     },
     {
         "plyr_id":22,
         "plyr_name_id": "yuzvendra-chahal",
         "player_name":"Yuzvendra Chahal",
+        "plyr_ipfs_link":"https://ipfs.io/ipfs/QmfX9rbhyXCT1WYBKdL6m2V5KyScF7YyKYxuZUAw6giz4k",
+        "plyr_ar_link":"https://www.instagram.com/ar/453884366402127/?ch=N2FiNjIyY2JiNzk2NDE0ZTIwNzFiNTNmY2U1MmQ5N2E%3D",
         "vid_url":"https://assets.website-files.com/6061b001465d710b0b48b3b9/60675f1cd40d9eb39ebb1bad_chahal-transcode.mp4"
     }
     
