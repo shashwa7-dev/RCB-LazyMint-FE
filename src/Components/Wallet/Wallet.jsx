@@ -3,22 +3,38 @@ import metamask from '../../static/metamask.svg'
 import wallet_connect from '../../static/wallet_connect.svg'
 
 import { useMoralis } from 'react-moralis'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useLocation } from 'react-router-dom'
+
+import { SuccessPopup } from '../SuccessPopUp/SuccessPopup'
+import { useState } from 'react'
 
 export const Wallet = ({closeWallet}) => {
        
+
     const { isAuthenticated, account, authenticate} = useMoralis()
     const navigate  = useNavigate()
+    const location = useLocation()
+    const [showSuccess, setShowSuccess] = useState(false)
 
     const connect = async () => {
         await authenticate({
             provider: 'walletconnect',
             signingMessage: 'Connect your wallet & Claim you NFT !!',
         })
-        await navigate("/share_nft")
+        setShowSuccess(true)
     }
 
+
+    const walletClose = () => {
+        if(location.pathname === '/claim_nft'){
+            navigate('/tutorial')
+        } else {
+           closeWallet()
+        }
+    }
        return(
+        <>
+        {showSuccess ? <SuccessPopup/> :
         <div className='wallet_component'>
         <div className="wallet_container">
            <div className="wallet_head">
@@ -44,9 +60,10 @@ export const Wallet = ({closeWallet}) => {
            </div>
            <div className="wallet_footer">
                <p className="wallet_footer_note">Haven’t got a crypto wallet yet?</p>
-               <button onClick={() => navigate("/tutorial")} className="how2connect_btn">Learn How to Connect</button>
+               <button onClick={() => walletClose()} className="how2connect_btn">Learn How to Connect</button>
            </div>
            </div>
-        </div>
+        </div> }
+        </>
        )  
 }

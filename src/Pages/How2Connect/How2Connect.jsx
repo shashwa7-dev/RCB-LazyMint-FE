@@ -1,6 +1,6 @@
 import './How2Connect.css'
 import { Navbar } from '../../Components/Navbar/Navbar'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 import { Wallet } from '../../Components/Wallet/Wallet'
 
 export const How2Connect = () => {

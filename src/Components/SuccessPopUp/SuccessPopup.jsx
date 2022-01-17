@@ -1,7 +1,11 @@
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 import './SuccessPopup.css'
 
+import { useNavigate } from 'react-router-dom'
+
+
 export const SuccessPopup = () => {
+    const navigate  = useNavigate()
     /* Popup close logic */
     const [closePopup, setClosePopUp] = useState(false)
 
@@ -12,7 +16,7 @@ export const SuccessPopup = () => {
                 <h1 className="popup_heading">Success !</h1>
                 <p className="popup_text">Your NFT has been added to 
     your wallet</p>
-                <button className="popup_btn" onClick={() => setClosePopUp(true)}>OK</button>
+                <button className="popup_btn" onClick={() => navigate("/share_nft")}>OK</button>
             </div>        
         </div>) : ''
     )

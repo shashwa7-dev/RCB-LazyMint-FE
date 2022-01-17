@@ -2,7 +2,7 @@ import './PreviewNFT.css'
 import { useMoralis } from 'react-moralis'
 import { Navbar } from '../../Components/Navbar/Navbar'
 import {Timeline} from '../../Components/Timeline/Timeline'
-import { useEffect, useState } from 'react/cjs/react.development'
+import { useEffect, useState } from 'react'
 import { Wallet } from '../../Components/Wallet/Wallet'
 
 import { useModalStore } from '../../App'

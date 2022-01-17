@@ -5,7 +5,7 @@ import {Timeline} from '../../Components/Timeline/Timeline'
 import { useNavigate } from 'react-router-dom'
 import { useModalStore } from '../../App'
 
-import { useEffect, useState } from 'react/cjs/react.development'
+import { useEffect, useState } from 'react'
 
 export const ShareNFT = ({plyr}) => {
     const navigate = useNavigate()
