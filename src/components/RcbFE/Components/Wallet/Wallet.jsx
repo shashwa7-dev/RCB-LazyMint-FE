@@ -1,4 +1,4 @@
-import styles from './Wallet.module.css'
+import './Wallet.css'
 import metamask from '../../static/metamask.svg'
 import wallet_connect from '../../static/wallet_connect.svg'
 
@@ -6,30 +6,67 @@ import { useMoralis } from 'react-moralis'
 import { useNavigate,useLocation } from 'react-router-dom'
 
 import { SuccessPopup } from '../SuccessPopUp/SuccessPopup'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-export const Wallet = ({closeWallet,forwardedRef,setShowWallet}) => {
+import axios from 'axios'
+import { ErrorPopUp } from '../Error/ErrorPopUp'
+
+
+import { useModalStore } from '../../../../App'
+export const Wallet = ({closeWallet}) => {
        
-useEffect(() => {
-    document.addEventListener('mousedown',(event) => {
-        if(forwardedRef.current && !forwardedRef.current.contains(event.target))
-            setShowWallet(false)
-    })
-    console.log(forwardedRef.current, 'forwareded ref from parent!')
-}, [])
-
+    const [walletId,setWalletId] = useState(null)
     const { isAuthenticated, account, authenticate} = useMoralis()
     const navigate  = useNavigate()
     const location = useLocation()
     const [showSuccess, setShowSuccess] = useState(false)
+    const {error,setErrorTrue} = useModalStore()
+
+    const WalletPost = async () => {
+        axios
+          .post("https://rcb-be.herokuapp.com/rcb/wallet", {
+            email: localStorage.getItem("email"),
+            wallet: walletId
+          })
+          .then((res) => {
+            console.log(res);
+            setShowSuccess(true)
+          })
+          .catch((err) => {
+            console.log(err);
+            setErrorTrue(true)
+          });
+      };
+
+
 
     const connect = async () => {
         await authenticate({
             provider: 'walletconnect',
             signingMessage: 'Connect your wallet & Claim you NFT !!',
         })
-       
+        console.log(isAuthenticated)
+        if(isAuthenticated) {
+            setWalletId(account)
+            WalletPost()
+        }
+      
+
     }
+
+    const MetaMaskConnect = async() => {await authenticate({
+        provider: 'metamask',
+        signingMessage: 'Connect your wallet & Claim you NFT !!',
+    })
+    console.log(isAuthenticated)
+    console.log(account)
+    if(isAuthenticated) {
+        setWalletId(account)
+        WalletPost()
+    }
+}
+
+
 
     const walletClose = () => {
         if(location.pathname === '/claim_nft'){
@@ -40,36 +77,36 @@ useEffect(() => {
     }
        return(
         <>
-        {showSuccess ? <SuccessPopup/> :
-    
-        <div className={styles.wallet_component}>
-        <div ref={forwardedRef} className={styles.wallet_container}>
-           <div className={styles.wallet_head}>
-               <h1 className={styles.wallet_heading}>Connect Wallet</h1>
-               <button className={styles.close_wallet_container_btn} onClick={closeWallet}><i class="fas fa-times"></i></button>
+        { error ? <ErrorPopUp/> : 
+        showSuccess ? <SuccessPopup/> :
+        <div className='wallet_component'>
+        <div className="wallet_container">
+           <div className="wallet_head">
+               <h1 className='wallet_heading'>Connect Wallet</h1>
+               <button className='close_wallet_container_btn' onClick={closeWallet}>x</button>
            </div> 
-           <div className={styles.wallet_body}>
-            <p className={styles.wallet_body_note}>*Select your preferable wallet.</p>
-            <div className={styles.wallets}>
-               <div className={`${styles.wallet} ${styles.meta_mask}`}>
-                <img src={metamask}className={styles.walletImg} />
-                   <p className={styles.walletName}>Meta Mask</p>
-                   <span className={styles.chevron}><i class="fas fa-chevron-right"></i></span>
+           <div className="wallet_body">
+            <p className='wallet_body_note'>*Select your preferable wallet.</p>
+            <div className="wallets">
+               <div className="wallet meta_mask"  onClick={MetaMaskConnect}>
+                <img src={metamask}className="walletImg" />
+                   <p className="walletName">Meta Mask</p>
+                   <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
-               <div className={`${styles.wallet} ${styles.wallet_connect}`} onClick={connect}>
-               <img src={wallet_connect}className={styles.walletImg} />
-                   <p className={styles.walletName}>Wallet Connect</p>
-                   <span className={styles.chevron}><i class="fas fa-chevron-right"></i></span>
+               <div className="wallet wallet_connect" onClick={connect}>
+               <img src={wallet_connect}className="walletImg" />
+                   <p className="walletName">Wallet Connect</p>
+                   <span className="chevron"><i class="fas fa-chevron-right"></i></span>
                </div>
            </div>
+
            </div>
-           <div className={styles.wallet_footer}>
-               <p className={styles.wallet_footer_note}>Haven’t got a crypto wallet yet?</p>
-               <button className={styles.how2connect_btn} onClick={() => walletClose()} >Learn How to Connect</button>
+           <div className="wallet_footer">
+               <p className="wallet_footer_note">Haven’t got a crypto wallet yet?</p>
+               <button onClick={() => walletClose()} className="how2connect_btn">Learn How to Connect</button>
            </div>
            </div>
-        </div>
-    }
+        </div> }
         </>
        )  
 }

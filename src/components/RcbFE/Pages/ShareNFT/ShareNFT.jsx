@@ -31,7 +31,7 @@ export const ShareNFT = ({plyr}) => {
                     <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
                 </div>
                 <button onClick={() => 
-                    window.location.href = 'https://verify.dehidden.com/rcb/1'
+                    navigate(`/rcb/${localStorage.getItem("PLYR")}`)
                 } className="view_nft_btn">View NFT</button>
             </div>
            

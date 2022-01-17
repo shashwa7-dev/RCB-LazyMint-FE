@@ -51,7 +51,7 @@
 
 
 .wallet_head{
-padding:.5rem;
+padding:1rem;
 border-bottom:.35rem solid var(--color-secondary);
 display: flex;
 align-items: center;
@@ -68,6 +68,7 @@ z-index:2;
     color:white;
     background-color: transparent;
     cursor: pointer;
+    margin: 0 0 10px 0 !important
 }
 
 .wallet_body{

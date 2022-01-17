@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import "./TaskScreen.css";
+import styles from './TaskScreen.module.css'
 import rcb_logo from "../../static/rcb_logo.svg";
 import logo from "../../static/logo.svg";
 import { useEffect, useState } from "react";
-
+import "./TaskScreen.css"
 
 import { Timeline } from '../../Components/Timeline/Timeline'
 import axios from "axios";
@@ -49,7 +49,11 @@ export const TaskScreen = () => {
               FollowTwitter,
               InstagramVisited,
               Retweet,
+              WalletAddress
             } = res.data?.user;
+            if(WalletAddress.length > 10) {
+              navigate("/share_nft")
+            }
             setTask({
     
               taskC: InstagramVisited,
@@ -139,21 +143,21 @@ export const TaskScreen = () => {
   
 
   return (
-    <div className="task_screen">
-      <div className="dehidden_logo">
-        <img src={logo} alt="dehidden_logo" />
+    <div className={styles.task_screen}>
+    <div className={styles.dehidden_logo}>
+        <img src={logo} alt="dehidden_logo"/>
       </div>
 
       <Timeline stage_id={2} stage_complete_status={setB}/>
 
-      <div className="rcb_logo">
-        <img src={rcb_logo} alt="rcb_logo" />
-      </div>
-      <div className="heading">
-        <h1>Follow below steps to claim your NFT’s</h1>
-      </div>
-      <div className="tasks_container">
-      
+      <div className={styles.rcb_logo}>
+                <img src={rcb_logo} alt='rcb_logo' />
+            </div>
+            <div className={styles.heading}>
+                <h1>Follow below steps to claim your NFT’s</h1>
+            </div>
+            <div className={styles.tasks_container}>
+                
 
        
 

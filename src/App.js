@@ -27,9 +27,12 @@ export const useModalStore = create((set) => ({
   setA: false,
   setB: false,
   setC: false,
+  error: false,
   setSetA: () => set({ setA: true }),
   setSetB: () => set({ setB: true }),
   setSetC: () => set({ setC: true }),
+  setError: () => set({ error: false }),
+  setErrorTrue: () => set({ error: true }),
 }));
 
 class App extends React.Component {

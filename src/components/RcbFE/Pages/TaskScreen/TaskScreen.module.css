@@ -117,8 +117,7 @@
 
 
 .sub_task{
-    margin: unset;
-    margin-left:auto !important;
+    margin-left:auto;
     padding:.25rem;
     justify-content: center;
     border:1px solid rgb(255, 255, 255);

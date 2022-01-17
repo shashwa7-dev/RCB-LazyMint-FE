@@ -14,7 +14,7 @@ export const PreviewNFT = ({plyr}) => {
     const [walletConnected, setWalletConnected] = useState(false)
 
     const { account, web3, isWeb3Enabled, enableWeb3, Moralis } = useMoralis()
-    const {setSetA,setSetB,setC,setSetC} = useModalStore()
+    const {setSetA,setSetB,setError} = useModalStore()
     const navigate = useNavigate()
     
     useEffect(() => {
@@ -52,7 +52,10 @@ export const PreviewNFT = ({plyr}) => {
                     <video src={plyr.vid_url} autoPlay loop muted playsInline className='shadow'></video>
                 </div>
                 <div className="claim_nft_btn_container">
-                    <button className="claim_nft_btn" onClick={claimNft}>Connect & Claim NFT</button>
+                    <button className="claim_nft_btn" onClick={() => {
+                       claimNft()
+                       setError(false)
+                    }}>Connect & Claim NFT</button>
                     <p className='footer_note'>*Please connect your wallet to get the NFT</p>
                 </div>
             </div>
