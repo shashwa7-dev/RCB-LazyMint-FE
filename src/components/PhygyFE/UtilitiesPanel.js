@@ -5,7 +5,7 @@ import goggles from '../../static/media/goggles.png'
 import teddy  from '../../static/media/teddy.png'
 import saturn from '../../static/media/saturn.png'
 
-function RenderUtilityItem({data}){
+function RenderUtilityItem({data,styles}){
 
   const downloadFile = (url) => { 
     fetch(url, {
@@ -40,13 +40,13 @@ function RenderUtilityItem({data}){
    if(data.id === 2){
      return(
         <a key={data.id} onClick={(e) => alert('You must download our AR app!')}>
-        <div className="utility">
-          <div className="utility_icon">
+        <div className={styles.utility}>
+          <div className={styles.utility_icon}>
             <img src={data.img_src} alt="" />
           </div>
-          <div className="utility_text">
-            <div className="utility_heading">{data.head}</div>
-            <div className="utility_subheading">
+          <div className={styles.utility_text}>
+            <div className={styles.utility_heading}>{data.head}</div>
+            <div className={styles.utility_subheading}>
               {data.sub_head}
             </div>
           </div>
@@ -56,13 +56,13 @@ function RenderUtilityItem({data}){
    }else if(data.id === 3){
      return(
       <a key={data.id} onClick={()=> downloadFile(data.url)}>
-      <div className="utility">
-        <div className="utility_icon">
+      <div className={styles.utility}>
+        <div className={styles.utility_icon}>
           <img src={data.img_src} alt="" />
         </div>
-        <div className="utility_text">
-          <div className="utility_heading">{data.head}</div>
-          <div className="utility_subheading">
+        <div className={styles.utility_text}>
+          <div className={styles.utility_heading}>{data.head}</div>
+          <div className={styles.utility_subheading}>
             {data.sub_head}
           </div>
         </div>
@@ -72,13 +72,13 @@ function RenderUtilityItem({data}){
    }else{
     return(
         <a href={data.url} key={data.id} target="_blank" rel='noopener' rel="noreferrer">
-        <div className="utility">
-          <div className="utility_icon">
+        <div className={styles.utility}>
+          <div className={styles.utility_icon}>
             <img src={data.img_src} alt="" />
           </div>
-          <div className="utility_text">
-            <div className="utility_heading">{data.head}</div>
-            <div className="utility_subheading">
+          <div className={styles.utility_text}>
+            <div className={styles.utility_heading}>{data.head}</div>
+            <div className={styles.utility_subheading}>
               {data.sub_head}
             </div>
           </div>
@@ -87,7 +87,7 @@ function RenderUtilityItem({data}){
     )
     }
 }
-function UtilitiesPanel() {
+function UtilitiesPanel({styles}) {
    let items = [
     {  
     id:1,      
@@ -119,9 +119,9 @@ function UtilitiesPanel() {
  }
 ]
   return (
-    <div className="utilities">
-      <div className="utilities_container">
-       {items.map(item => <RenderUtilityItem data={item} />)}
+    <div className={styles.utilities}>
+      <div className={styles.utilities_container}>
+       {items.map(item => <RenderUtilityItem data={item} styles={styles}/>)}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import MicroSiteNav from "./MicrositeNav"
 import UtilitiesPanel from "./UtilitiesPanel"
 import DisplayPanel from "./DisplayPanel"
-import '../../static/styles/phyg_styles.css'
+import styles from '../../static/styles/phyg_styles.module.css'
 
 function MicroSitePhygitals(){
 
@@ -12,13 +12,13 @@ function MicroSitePhygitals(){
         url:'https://verify.dehidden.com/phygitals/kit'
     }
     return(
-        <div class='phygBody'>
-        <div className="microsite">
-           <MicroSiteNav nft={nft}/>
-           <div className="microsite_page">
-           <DisplayPanel nft={nft} />
-            <div className="mainpanel">
-             <UtilitiesPanel />
+        <div className={styles.phygBody}>
+        <div className={styles.microsite}>
+           <MicroSiteNav nft={nft}  styles={styles}/>
+           <div className={styles.microsite_page}>
+           <DisplayPanel nft={nft} styles={styles}/>
+            <div className={styles.mainpanel} > 
+             <UtilitiesPanel styles={styles}/>
             </div>
            </div>        
         </div>

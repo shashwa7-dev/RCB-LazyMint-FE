@@ -297,6 +297,11 @@ button {
 .microsite .mobile_copy {
   display: -ms-grid;
   display: grid;
+  width:50px;
+  height: 50px;
+}
+.microsite .mobile_copy i{
+  font-size: 1.5rem;
 }
 .microsite .copytext_mobile {
   position: fixed;

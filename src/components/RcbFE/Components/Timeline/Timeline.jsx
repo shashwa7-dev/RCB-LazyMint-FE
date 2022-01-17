@@ -1,13 +1,8 @@
-import './Timeline.css'
+import styles from './Timeline.module.css'
 import line from '../../static/Line.svg'
 import {useState, useEffect} from 'react'
 import { useModalStore } from '../../../../App'
 
-
-
-
-
-  
 
 export const Timeline = ({stage_id,stage_complete_status}) => {
     
@@ -37,22 +32,44 @@ export const Timeline = ({stage_id,stage_complete_status}) => {
     },[stage_id])
 
 
-    return (
-        <div className='timeline_container'>
-          <div className="block block_1" style={{ background: block1Active ? "var(--color-gradient-2)" : 'transparent' }}>
-          {(setA ) ? <span><i class="fas fa-check"></i></span> : <span>1</span>}
+    // return (
+    //     <div className='timeline_container'>
+    //       <div className="block block_1" style={{ background: block1Active ? "var(--color-gradient-2)" : 'transparent' }}>
+    //       {(setA ) ? <span><i class="fas fa-check"></i></span> : <span>1</span>}
+    //       </div>  
+    //       <div className="line_1">
+    //           <img src={line} alt="line" className="line_svg" />
+    //       </div>
+    //       <div className="block block_2" style={{ background: block2Active ? "var(--color-gradient-2)" : 'transparent' }}>
+    //       {(setB ) ? <span><i class="fas fa-check"></i></span> : <span>2</span>}
+    //       </div>
+    //       <div className="line_2">
+    //          <img src={line} alt="line" className="line_svg" />
+    //       </div>
+    //       <div className="block block_3" style={{ background: block3Active ? "var(--color-gradient-2)" : 'transparent' }}>
+    //       {(setC ) ? <span> <i class="fas fa-check"></i> </span>: <span>3</span>}   
+    //       </div>
+            
+    //     </div>
+
+        
+    // )
+    return(
+        <div className={styles.timeline_container}>
+          <div className={`${styles.block} ${styles.block_1}`} style={{ background: block1Active ? "var(--color-gradient-2)" : 'transparent' }}>
+          {(setA) ? <span><i class="fas fa-check"></i></span> : <span>1</span>}
           </div>  
-          <div className="line_1">
-              <img src={line} alt="line" className="line_svg" />
+          <div className={styles.line_1}>
+              <img src={line} alt="line" className={styles.line_svg}/>
           </div>
-          <div className="block block_2" style={{ background: block2Active ? "var(--color-gradient-2)" : 'transparent' }}>
+          <div className={`${styles.block} ${styles.block_2}`} style={{ background: block2Active ? "var(--color-gradient-2)" : 'transparent' }}>
           {(setB ) ? <span><i class="fas fa-check"></i></span> : <span>2</span>}
           </div>
-          <div className="line_2">
-             <img src={line} alt="line" className="line_svg" />
+          <div className={styles.line_2}>
+             <img src={line} alt="line" className={styles.line_svg} />
           </div>
-          <div className="block block_3" style={{ background: block3Active ? "var(--color-gradient-2)" : 'transparent' }}>
-          {(setC ) ? <span> <i class="fas fa-check"></i> </span>: <span>3</span>}   
+          <div className={`${styles.block} ${styles.block_3}`} style={{ background: block3Active ? "var(--color-gradient-2)" : 'transparent' }}>
+          {(setC ) ?<span> <i class="fas fa-check"></i> </span>: <span>3</span>}   
           </div>
             
         </div>

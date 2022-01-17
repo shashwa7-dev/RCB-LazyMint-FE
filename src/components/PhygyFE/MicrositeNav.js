@@ -12,43 +12,43 @@ const handleCopy = (e, link) => {
         document.querySelector(".copytext_mobile").style.display = "none";
       }, 1000);
     } else {
-      document.querySelector('.btn-txt').innerText = "Copied!"
+      document.querySelector('.btn_txt').innerText = "Copied!"
 
       setTimeout(() => {
-        document.querySelector('.btn-txt').innerHTML = "Copy"
+        document.querySelector('.btn_txt').innerHTML = "Copy"
       }, 1000);
     }
   };
 
-function MicroSiteNav({ nft }) {
+function MicroSiteNav({ nft, styles }) {
   return (
     <div>
-      <div className="microsite_nav">
-        <div className="logo">
+      <div className={styles.microsite_nav}>
+        <div className={styles.logo}>
           <img src={logo} alt="Dehidden-logo" />
         </div>
       </div>
-      <div className="right_nav">
-        <div className="linkbar">
-          <div className="linkbar_text">
+      <div className={styles.right_nav}>
+        <div className={styles.linkbar}>
+          <div className={styles.linkbar_text}>
             {nft.url}
           </div>
-          <button className="button primary" onClick={(e) =>
+          <button className={`${styles.button} ${styles.primary}`} onClick={(e) =>
               handleCopy(
                 e,
                 `${nft.url}`
               )
             }>
-          <i className="fa fa-copy"></i>
-          <span className='btn-txt'>Copy</span>
+          <i class="fa fa-copy"></i>
+          <span className={styles.btn_txt}>Copy</span>
           </button>
         </div>
         <div
-          className="mobile_copy"
+          className={styles.mobile_copy}
           onClick={(e) =>
             handleCopy(e, `${nft.url}`)
-          }> <i className="fas fa-copy"></i> </div>
-        <div className="copytext_mobile">Copied to Clipboard!</div>
+          }> <i class="fas fa-copy"></i> </div>
+        <div className={styles.copytext_mobile}>Copied to Clipboard!</div>
       </div>
     </div>
   );

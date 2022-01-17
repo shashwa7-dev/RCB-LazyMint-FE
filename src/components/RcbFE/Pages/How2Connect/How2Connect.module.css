@@ -26,8 +26,7 @@
 .imp_link{
     background: var(--color-gradient);
     color:white;   
-    font-style: italic;
-    padding:.2rem;  
+    font-style: italic;  
     text-decoration: underline;
     cursor: pointer;
 }
@@ -44,6 +43,34 @@
 margin:1rem 2rem;
 text-align: initial;
 }
+
+.go_back_btn{
+    margin: auto;
+    display: block;
+    background-color: transparent;
+    padding:0;
+    border:0;
+    text-align: center;
+    padding:.5rem;
+}
+.go_back_btn i{
+    color:wheat;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.floating_gbk_btn {   
+    animation-name: floating_btn_x_axis; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+} 
+  
+@keyframes floating_btn_x_axis { 
+    0% { transform: scale(1); } 
+    50%  { transform: scale(1.1); } 
+    100%   { transform: scale(1); }     
+} 
+
 .how2Connect_footer .connect_wallet{
     padding:.5rem;
     width:65%;

@@ -1,17 +1,14 @@
-import "./MainScreen.css";
+import styles from "./MainScreen.module.css";
 import rcb_logo from "../../static/rcb_logo.svg";
-import data from "../../../../data/rcb_players.json"
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { useState } from "react";
-
 import axios from "axios";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import { useNavigate } from "react-router-dom";
-
 import {Timeline} from '../../Components/Timeline/Timeline'
 import { useModalStore } from '../../../../App'
 
-export const MainScreen = () => {
+export const MainScreen = ({plyr}) => {
   const [showOtpField, setShowOtpField] = useState(false);
   const [otp, setOtp] = useState();
   const [email, setEmail] = useState("");
@@ -64,22 +61,22 @@ export const MainScreen = () => {
       });
   };
   return (
-    <div className="Mainscreen">
-      <Navbar />
-      <Timeline stage_id={1} stage_complete_status={setA}/>
-      <div className="content_container">
-        <div className="main_nft_display">
-          <video src={data[0].vid_url} autoPlay loop muted playsInline></video>
-        </div>
+    <div className={styles.Mainscreen}>
+                <Navbar />
+                <Timeline stage_id={1} stage_complete_status={setA}/>
+                <div className={styles.content_container}>
+                    <div className={styles.main_nft_display}>
+                        <video src={plyr.vid_url} autoPlay loop muted playsInline></video>
+                    </div>
 
-        <div className="main_content">
-          <img src={rcb_logo} alt="" className="logo_content" />
-          <h1>Get a chance to win a RCB NFT Card</h1>
-          <p>
-           Follow the steps below to redeem an exclusive NFT card of your favourite RCB players
-          </p>
-    
-          {showOtpField ? (
+                    <div className={styles.main_content}>
+                    <img src={rcb_logo} alt="" className={styles.logo_content} />
+                        <h1>Get a chance to win a 
+        RCB NFT Card</h1>
+                        <p>
+                        Follow the steps below to redeem an exclusive NFT card of your favourite RCB players
+                        </p>  
+        {showOtpField ?  (
             <>
               <div className="inputFl_container"  style={{color:"black"}}>
                 <OTPInput
@@ -95,9 +92,9 @@ export const MainScreen = () => {
                   disabled={false}
                   secure={false}
                 />
-            <div className="otp_blocks_container">
-                <button
-                  className="submitOtp"
+            <div class={styles.otp_blocks_container}>
+            <button 
+                  className={styles.submitOtp}
                   onClick={() => {
                     otp.length >= 4 ? VerifyOTP() : setErrors("Enter OTP")
                   }}
@@ -109,23 +106,17 @@ export const MainScreen = () => {
             </>
           ) : (
             <>
-              <div className="inputFl_container">
-                <input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="roundBox input"
-                  placeholder="Verify Email"
-                  type={"email"}
-                  required
-                />
-                <button
-                  onClick={() => {
+            <div className={styles.inputFl_container}>
+            <input 
+             value={email}
+             onChange={(e) => setEmail(e.target.value)}
+             className={`${styles.roundBox} ${styles.input}`} placeholder='Verify Email' 
+             type={"email"}
+             required/> 
+            <button  onClick={() => {
                     email?.length > 0 ? SendOTP() : setErrors("Enter Email");
-                  }}
-                >
-                  Send OTP
-                </button>
-              </div>
+                  }}>Send OTP</button>
+             </div>
             </>
           )}
           {error && 

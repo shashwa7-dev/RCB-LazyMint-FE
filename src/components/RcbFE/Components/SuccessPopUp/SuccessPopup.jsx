@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import './SuccessPopup.css'
-
+import styles from './SuccessPopup.module.css'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -10,14 +9,14 @@ export const SuccessPopup = () => {
     const [closePopup, setClosePopUp] = useState(false)
 
     return (
-        !closePopup ? (
-        <div className="success_popup_container"> 
-            <div className="popup_body">
-                <h1 className="popup_heading">Success !</h1>
-                <p className="popup_text">Your NFT has been added to 
-    your wallet</p>
-                <button className="popup_btn" onClick={() => navigate("/share_nft")}>OK</button>
-            </div>        
-        </div>) : ''
-    )
+            !closePopup ? (
+            <div className={styles.success_popup_container}> 
+                <div className={styles.popup_body}>
+                    <h1 className={styles.popup_heading}>Success !</h1>
+                    <p className={styles.popup_text}>Your NFT has been added to 
+        your wallet</p>
+                    <button className={styles.popup_btn} onClick={() => navigate("/share_nft")}>OK</button>
+                </div>        
+            </div>) : ''
+        )
 }

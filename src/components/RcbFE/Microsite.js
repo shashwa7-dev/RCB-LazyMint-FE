@@ -4,7 +4,7 @@ import DisplayPanel from "./DisplayPanel"
 import { useParams,useNavigate } from 'react-router-dom'
 import RCB_PLYR_DATA from '../../data/rcb_players.json'
 import NotFound from "../404"
-import '../../static/styles/rcb_FE.css'
+import styles from '../../static/styles/rcb_FE.module.css'
 
 import { useEffect,useState } from 'react'
 
@@ -39,13 +39,13 @@ function MicroSiteRCB(){
         // validating plyr param before rendering it to dom
         //if ply is invalid or doesn't exists it will be redicted to Not found page!
         data && data[0] ? (
-        <div className="rcbBody">
-        <div className="rcb_microsite">
-           <MicroSiteNav plyr={data[0]}/>
-           <div className="rcb_microsite_page">
-           <DisplayPanel plyr={data[0]} />
-            <div className="rcb_mainpanel">
-             <UtilitiesPanel plyr={data[0]} />
+        <div className={styles.rcbBody}>
+        <div className={styles.rcb_microsite}>
+           <MicroSiteNav plyr={data[0]} styles={styles}/>
+           <div className={styles.rcb_microsite_page}>
+           <DisplayPanel plyr={data[0]} styles={styles}/>
+            <div className={styles.rcb_mainpanel}>
+             <UtilitiesPanel plyr={data[0]} styles={styles}/>
             </div>
            </div>        
         </div>

@@ -1,3 +1,7 @@
+input[type=tel] {
+    width: 50px !important;
+    height: 50px !important
+}
 .Mainscreen{
     width: 100%;  
     min-height: 100vh; 
@@ -13,18 +17,6 @@
     display: none;
 }
 
-input[type=tel] {
-    width: 50px !important;
-    height: 50px !important
-}
-
-.error{
-    color: unset !important;
-    color: white !important;
-    display: flex;
-    flex-wrap: nowrap;
-    padding:0rem !important;
-}
 
 .main_nft_display{
     margin:1rem auto;
@@ -32,7 +24,14 @@ input[type=tel] {
     padding:1rem;
     background-color: rgba(0, 0, 0, 0);
 }
+.main_nft_display::before{
+    inset: 0;
+    position: absolute;
+    content: "";
+    background-color: rgba(255, 15, 15, 0);
+    filter: blur(2px);
 
+}
 
 .main_nft_display video{
     height: 100%;
@@ -111,6 +110,7 @@ border:2px solid var(--color-secondary);
 .otp_blocks_container  button{
     margin-top:.5rem;
     margin-left:.5rem;
+    margin-right:auto;
     width: 100%;
     padding:.5rem;
     border-radius: 0.5rem;

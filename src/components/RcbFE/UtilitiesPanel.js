@@ -7,19 +7,19 @@ import teddy  from '../../static/media/teddy.png'
 import saturn from '../../static/media/saturn.png'
 
 
-function RenderUtilityItem({data}){
+function RenderUtilityItem({data,styles}){
 
    if(data.id === 3){ 
      return(
       // <a key={data.id} onClick={() => downloadFile(`${data.url}`)} >
      <a key={data.id} href={data.url} download='3D_model.mp4' target="_blank" rel='noopener' rel="noreferrer">
-      <div className="rcb_utility">
-        <div className="rcb_utility_icon">
+      <div className={styles.rcb_utility}>
+        <div className={styles.rcb_utility_icon}>
           <img src={data.img_src} alt="" />
         </div>
-        <div className="rcb_utility_text">
-          <div className="rcb_utility_heading">{data.head}</div>
-          <div className="rcb_utility_subheading">
+        <div className={styles.rcb_utility_text}>
+          <div className={styles.rcb_utility_heading}>{data.head}</div>
+          <div className={styles.rcb_utility_subheading}>
             {data.sub_head}
           </div>
         </div>
@@ -29,13 +29,13 @@ function RenderUtilityItem({data}){
    }else{
     return(
         <a href={data.url} key={data.id} target="_blank" rel='noopener' rel="noreferrer">
-        <div className="rcb_utility">
-          <div className="rcb_utility_icon">
+        <div className={styles.rcb_utility}>
+          <div className={styles.rcb_utility_icon}>
             <img src={data.img_src} alt="" />
           </div>
-          <div className="rcb_utility_text">
-            <div className="rcb_utility_heading">{data.head}</div>
-            <div className="rcb_utility_subheading">
+          <div className={styles.rcb_utility_text}>
+            <div className={styles.rcb_utility_heading}>{data.head}</div>
+            <div className={styles.rcb_utility_subheading}>
               {data.sub_head}
             </div>
           </div>
@@ -44,7 +44,7 @@ function RenderUtilityItem({data}){
     )
     }
 }
-function UtilitiesPanel({plyr}) {
+function UtilitiesPanel({plyr,styles}) {
 
    let items = [
     {  
@@ -77,9 +77,9 @@ function UtilitiesPanel({plyr}) {
  }
 ]
   return (
-    <div className="rcb_utilities">
-      <div className="rcb_utilities_container">
-       {items.map(item => <RenderUtilityItem data={item} />)}
+    <div className={styles.rcb_utilities}>
+      <div className={styles.rcb_utilities_container}>
+       {items.map(item => <RenderUtilityItem data={item} styles={styles}/>)}
       </div>
     </div>
   );
