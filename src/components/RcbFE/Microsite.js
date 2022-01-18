@@ -18,11 +18,10 @@ function MicroSiteRCB(){
     console.log(plyrID)
     const [data,setData] = useState(false)
     useEffect(() => {
-         console.log("hello")
         let GET_LOCAL = localStorage.getItem('claimed_nft')
      
         if(!GET_LOCAL || GET_LOCAL === 'false'){
-           navigate("/main")
+           navigate("/auth")
         } else {
           let Ply_ID = localStorage.getItem('PLYR')
             console.log(Ply_ID)

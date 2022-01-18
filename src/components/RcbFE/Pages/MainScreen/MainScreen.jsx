@@ -11,6 +11,9 @@ import { useNavigate } from "react-router-dom";
 import {Timeline} from '../../Components/Timeline/Timeline'
 import { useModalStore } from '../../../../App'
 
+
+import GoogleLogin from 'react-google-login';
+
 export const MainScreen = () => {
   const [showOtpField, setShowOtpField] = useState(false);
   const [otp, setOtp] = useState();
@@ -53,7 +56,7 @@ export const MainScreen = () => {
         setSetA(true)
         localStorage.setItem("email",email);
         localStorage.setItem("verified","true");
-        navigate("/tasks");
+        navigate("/auth/tasks");
         }
         res?.status === 400 && setErrors("Invalid OTP")
       })
@@ -63,6 +66,43 @@ export const MainScreen = () => {
       
       });
   };
+
+  const login = async (code) => {
+    return fetch('https://rcb-be.herokuapp.com/rcb/google', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return Promise.reject(res);
+      }
+    });
+  };
+
+  const responseGoogle = async (authResult) => {
+    try {
+      if (authResult['code']) {
+        const result = await login(authResult['code']);
+         console.log(result)
+        if (result) {
+          console.log(result?.msg)
+          localStorage.setItem("email",result?.msg);
+          localStorage.setItem("verified","true");
+          navigate("/auth/tasks");
+        }
+      } else {
+        throw new Error(authResult);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+
   return (
     <div className="Mainscreen">
       <Navbar />
@@ -79,7 +119,7 @@ export const MainScreen = () => {
            Follow the steps below to redeem an exclusive NFT card of your favourite RCB players
           </p>
     
-          {showOtpField ? (
+          {/* {showOtpField ? (
             <>
               <div className="inputFl_container"  style={{color:"black"}}>
                 <OTPInput
@@ -127,7 +167,22 @@ export const MainScreen = () => {
                 </button>
               </div>
             </>
-          )}
+          )} */}
+            <GoogleLogin
+        // use your client id here
+        clientId={'930945739796-153247bqh3klvidel19qu7lvrpsrv50h.apps.googleusercontent.com'}
+        buttonText="Login with google"
+        responseType="code"
+        /**
+         * To get access_token and refresh_token in server side,
+         * the data for redirect_uri should be postmessage.
+         * postmessage is magic value for redirect_uri to get credentials without actual redirect uri.
+         */
+        redirectUri="postmessage"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={'single_host_origin'}
+      />
           {error && 
           <div style={{display:"flex",color:"white"}} className="error">
           <i style={{color:"white",marginTop:"20px"}} className="fa fa-exclamation-circle fa-1x" aria-hidden="true"></i>

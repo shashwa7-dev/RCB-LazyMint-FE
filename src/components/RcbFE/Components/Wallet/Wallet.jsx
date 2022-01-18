@@ -69,8 +69,8 @@ export const Wallet = ({closeWallet}) => {
 
 
     const walletClose = () => {
-        if(location.pathname === '/claim_nft'){
-            navigate('/tutorial')
+        if(location.pathname === '/auth/claim_nft'){
+            navigate('/auth/tutorial')
         } else {
            closeWallet()
         }

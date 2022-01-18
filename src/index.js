@@ -5,6 +5,7 @@ import {BrowserRouter} from 'react-router-dom'
 import './index.css'
 import { MoralisProvider } from 'react-moralis'
 
+
 ReactDOM.render(
   <React.StrictMode>
      <BrowserRouter> 

@@ -17,7 +17,7 @@ export const SuccessPopup = () => {
           className="popup_btn"
           onClick={() => {
             localStorage.setItem("claimed_nft", "true");
-            navigate("/share_nft");
+            navigate("/auth/share_nft");
           }}
         >
           OK

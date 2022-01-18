@@ -8,6 +8,8 @@ import { Wallet } from '../../Components/Wallet/Wallet'
 import { useModalStore } from '../../../../App'
 import { useNavigate } from 'react-router-dom'
 
+import axios from 'axios'
+
 export const PreviewNFT = ({plyr}) => {
 
     const [showWallet, setShowWallet] = useState(false)
@@ -19,8 +21,24 @@ export const PreviewNFT = ({plyr}) => {
     
     useEffect(() => {
         let verification = localStorage.getItem("taskCompleted");
+        axios
+        .post("https://rcb-be.herokuapp.com/rcb/status", {
+          email: localStorage.getItem("email"),
+        }).then((res) => {
+            const {
+                WalletAddress
+              } = res.data?.user;
+              if((WalletAddress !== "false" || WalletAddress !== "null") && WalletAddress.length > 10) {
+                localStorage.setItem("wallet",WalletAddress);
+                localStorage.setItem("taskCompleted", "true");
+                navigate("/auth/share_nft")
+              }
+            }).catch((err) => {
+                console.log(err);
+            })
+
         if (verification === "false" || !verification) {
-          navigate("/tasks");
+          navigate("/auth/tasks");
         } else {
         setSetA(true)
         setSetB(true) 

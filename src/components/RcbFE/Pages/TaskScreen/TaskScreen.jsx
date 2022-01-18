@@ -32,7 +32,7 @@ export const TaskScreen = () => {
     const Check = async () => {
       let verification = localStorage.getItem("verified");
       if (verification === "false" || !verification) {
-        navigate("/");
+        navigate("/auth");
       }
       let Email = localStorage.getItem("email");
       setEmail(Email);
@@ -51,11 +51,13 @@ export const TaskScreen = () => {
               Retweet,
               WalletAddress
             } = res.data?.user;
-            if(WalletAddress.length > 10) {
-              navigate("/share_nft")
+            if((WalletAddress !== "false" || WalletAddress !== "null") && WalletAddress.length > 10) {
+              localStorage.setItem("wallet",WalletAddress);
+              localStorage.setItem("claimed_nft", "true");
+              localStorage.setItem("taskCompleted", "true");
+              navigate("/auth/share_nft")
             }
             setTask({
-    
               taskC: InstagramVisited,
               taskD: FollowTwitter,
               taskE: Retweet,
@@ -364,7 +366,7 @@ export const TaskScreen = () => {
           onClick={() => {
             localStorage.setItem("taskCompleted","true");
             setSetB(true);
-            navigate("/claim_nft");
+            navigate("/auth/claim_nft");
           }}
         >
           Continue

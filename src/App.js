@@ -40,14 +40,14 @@ class App extends React.Component {
   return (
     <div className="App">
       <Routes>
-        <Route path="/phygitals/kit/" element={<MicroSitePhygitals />}/>
-        <Route path="/rcb/:plyrID" element={<MicroSiteRCB/>}/>
+        <Route exact path="/phygitals/kit/" element={<MicroSitePhygitals />}/>
+        <Route exact path="/rcb/:plyrID" element={<MicroSiteRCB/>}/>
         <Route path="*" element ={<NotFound />}/>
-        <Route path="/main" element={<MainScreen plyr={data[0]} />} />
-        <Route path="/tasks" element={<TaskScreen />} />
-        <Route path="/claim_nft" element={<PreviewNFT plyr={data[0]} />} />
-        <Route path="/share_nft" element={<ShareNFT plyr={data[0]} />} />
-        <Route path="/tutorial" element={<How2Connect />} />
+        <Route exact path="/auth" element={<MainScreen plyr={data[0]} />} />
+        <Route exact path="/auth/tasks" element={<TaskScreen />} />
+        <Route exact path="/auth/claim_nft" element={<PreviewNFT plyr={data[0]} />} />
+        <Route exact path="/auth/share_nft" element={<ShareNFT plyr={data[0]} />} />
+        <Route exact path="/auth/tutorial" element={<How2Connect />} />
       </Routes>
     </div>
   );

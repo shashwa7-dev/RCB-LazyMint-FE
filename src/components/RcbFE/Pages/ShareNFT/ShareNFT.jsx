@@ -7,13 +7,14 @@ import { useModalStore } from '../../../../App'
 
 import { useEffect, useState } from 'react'
 
+
 export const ShareNFT = ({plyr}) => {
     const navigate = useNavigate()
     const {setSetC,setSetA,setSetB} = useModalStore()
     useEffect(() => {
         let verification = localStorage.getItem("taskCompleted");
         if (verification === "false" || !verification) {
-          navigate("/tasks");
+          navigate("/auth/tasks");
         } else {
         setSetA(true)
         setSetB(true) 

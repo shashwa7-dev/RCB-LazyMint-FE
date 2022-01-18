@@ -16,7 +16,7 @@ export const How2Connect = () => {
     useEffect(() => {
         let verification = localStorage.getItem("taskCompleted");
         if (verification === "false" || !verification) {
-          navigate("/tasks");
+          navigate("/auth/tasks");
         } else {
         setSetA(true)
         setSetB(true) 
@@ -49,7 +49,7 @@ export const How2Connect = () => {
                 </p>
                 <button className="connect_wallet" onClick={() => setShowWallet(true)} >Connect Wallet</button>
                 <>
-                <Link to='/claim_nft'><button className={`go_back_btn floating_gbk_btn`}> <i class="fas fa-chevron-circle-left"></i></button></Link>
+                <Link to='/auth/claim_nft'><button className={`go_back_btn floating_gbk_btn`}> <i class="fas fa-chevron-circle-left"></i></button></Link>
                 </>
             </div>
          </div>
